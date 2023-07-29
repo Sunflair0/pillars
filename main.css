@@ -1,0 +1,82 @@
+:root {
+	--purple: rgb(189, 17, 238);
+	--white: rgb(227, 227, 227);
+	--pulse: #766ce0;
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: rgb(0, 0, 0);
+	color: var(--white);
+}
+
+.but1 {
+	height: 50px;
+	width: 150px;
+	background: linear-gradient(#2c1b68 40%, transparent 50%, rgba(14, 39, 175, 0.882) 55%);
+
+}
+
+.but2 {
+
+	border: 1px solid var(--pulse);
+	color: var(--pulse);
+
+
+	border-radius: 10px;
+	height: 50px;
+	width: 150px;
+	background: linear-gradient(15deg,
+			hsla(198, 93%, 47%, 0.3) 65%,
+			/* rgba(104, 179, 250, 0.2) 68%, */
+			transparent 75%,
+			transparent 78%,
+			hsla(252, 83%, 34%, 0.4) 85%,
+			purple 93%),
+		rgba(4, 34, 126, 0.2);
+	background-size: 200px 200px;
+	box-shadow: inset 0 0 2px 1px black,
+		inset 0 6px 5px rgba(242, 229, 247, 0.496),
+		inset 0 -5px 10px rgba(72, 66, 250, 0.2),
+		inset 0px -5px 1px rgba(106, 133, 156, 0.3),
+		inset -2px -5px 2px rgba(19, 84, 224, 0.3),
+		/* inset 7px -5px 2px rgba(0, 0, 0, 0.4), */
+		inset 7px 0px 3px rgba(14, 1, 36, 0.8),
+		inset -7px 0px 3px rgba(141, 115, 180, 0.255);
+	transition: .2s ease-out all;
+}
+
+.font {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	inset: 0;
+	margin: auto;
+	font-family: 'Trebuchet MS', sans-serif;
+	font-weight: 600;
+	text-shadow: 0 0 2px rgb(0, 0, 0),
+		1px 1px 5px rgb(18, 190, 203);
+	transition: .2s ease-out all;
+}
+
+.but2:hover {
+	border: rgba(224, 190, 241, 0.9) 1px solid;
+	color: rgb(185, 182, 245);
+text-shadow: 0px 0px 20px #ffffff;
+	box-shadow:
+		0 0 10px 10px rgba(172, 201, 238, 0.08),
+		0 0 20px 20px rgba(172, 201, 238, 0.08),
+		0 0 30px 30px rgba(172, 201, 238, 0.08),
+		inset -1px 5px 1px rgba(136, 172, 255, 0.675),
+		inset 1px -5px 1px rgba(39, 188, 252, 0.5),
+		inset -5px 5px 2px rgba(134, 129, 218, 0.578),
+		inset 5px -5px 2px rgba(134, 129, 218, 0.578);	
+	transition: .2s ease-out all;
+}
