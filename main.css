@@ -1,7 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+
 :root {
+	--primary_color: rgb(230, 230, 230);
+	--secondary_color:
+		linear-gradient(transparent 49.99%, #f4469dfb 50%, transparent 50.1%),
+		linear-gradient(transparent 45.9%, #ed238868 49.9%, transparent 53.1%),
+		radial-gradient(transparent 0%, #7a1547ca 50%, rgb(13, 2, 35) 80%),
+		radial-gradient(rgb(166, 182, 254) 60%, transparent 90%);
+	--primary_outline: rgb(105, 105, 105);
 	--purple: rgb(189, 17, 238);
 	--white: rgb(227, 227, 227);
 	--pulse: #766ce0;
+
+
 }
 
 *,
@@ -10,6 +21,10 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+html {
+	font-family: "Notable";
 }
 
 body {
@@ -25,11 +40,8 @@ body {
 }
 
 .but2 {
-
 	border: 1px solid var(--pulse);
 	color: var(--pulse);
-
-
 	border-radius: 10px;
 	height: 50px;
 	width: 150px;
@@ -69,7 +81,7 @@ body {
 .but2:hover {
 	border: rgba(224, 190, 241, 0.9) 1px solid;
 	color: rgb(185, 182, 245);
-text-shadow: 0px 0px 20px #ffffff;
+	text-shadow: 0px 0px 20px #ffffff;
 	box-shadow:
 		0 0 10px 10px rgba(172, 201, 238, 0.08),
 		0 0 20px 20px rgba(172, 201, 238, 0.08),
@@ -77,6 +89,151 @@ text-shadow: 0px 0px 20px #ffffff;
 		inset -1px 5px 1px rgba(136, 172, 255, 0.675),
 		inset 1px -5px 1px rgba(39, 188, 252, 0.5),
 		inset -5px 5px 2px rgba(134, 129, 218, 0.578),
-		inset 5px -5px 2px rgba(134, 129, 218, 0.578);	
+		inset 5px -5px 2px rgba(134, 129, 218, 0.578);
 	transition: .2s ease-out all;
+}
+
+.top {
+	display: flex;
+	position: relative;
+	width: 100%;
+	height: 20vh;
+	background: var(--secondary_color);
+}
+
+.mid_top {
+	display: flex;
+	position: absolute;
+	border-radius: 5%;
+	width: 90%;
+	height: 17vh;
+	background: rgba(65, 60, 105, 0.3);
+	background-image: repeating-linear-gradient(90deg, rgba(95, 70, 237, 0.1) 0 3px, transparent 3px 40px),
+		repeating-linear-gradient(hsla(245, 65%, 65%, 0.65) 0px 1px, transparent 1px 36px);
+	border-top: 1px solid rgba(16, 16, 216, 0.65);
+	border-bottom: 1px solid rgba(16, 16, 216, 0.65);
+	border-right: 2px solid rgba(3, 3, 127, 0.65);
+	border-left: 2px solid rgba(3, 3, 127, 0.65);
+	margin: auto;
+	inset: 0;
+}
+
+.inside {
+	display: flex;
+	position: absolute;
+	border-radius: 10%;
+	outline: hsla(245, 65%, 65%, 0.65) 1px solid;
+	outline-offset: -1px;
+	width: 95%;
+	height: 75%;
+	background: rgba(65, 60, 105, 0.3);
+	background-image: repeating-linear-gradient(90deg, rgba(242, 241, 251, 0.12) 0 2px, transparent 2px 40px),
+		repeating-linear-gradient(hsla(245, 53%, 17%, 0.3) 0px 1px, transparent 2px 16px);
+	border-left: 2px solid hsla(119, 85%, 38%, 0.553);
+	border-top: 2px solid hsla(119, 80%, 52%, 0.278);
+	border-right: 2px solid hsla(245, 65%, 65%, 0.145);
+	border-bottom: 2px solid hsla(245, 65%, 65%, 0.145);
+	margin: auto;
+	inset: 0;
+	filter: brightness(150%);
+	box-shadow: 2px 2px 2px black,
+		inset -2px -2px 2px rgba(34, 16, 6, 0.5),
+		inset 3px 3px 2px rgba(2, 81, 80, 0.5);
+}
+
+.words {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #c4176b;
+	width: 100%;
+	-webkit-text-stroke: 2px #000000;
+	text-shadow: 2px 2px 1px rgb(93, 3, 44);
+	-webkit-background-clip: text;
+	font-size: 27px;
+	letter-spacing: 15px;
+	z-index: 2;
+}
+
+.lower_container {
+	display: flex;
+	position: relative;
+	flex-basis: auto;
+	margin-top: 2vh;
+	height: 78vh;
+	bottom: 0;
+	width: 100%;
+	background: linear-gradient(45deg, hsla(253, 78%, 67%, 0.4), hsla(56, 74%, 12%, 0.5));
+
+}
+
+.sidebar {
+	display: flex;
+	position: absolute;
+	border-radius: 10px;
+	padding: 0 10px;
+	width: 25%;
+	height: 100%;
+	left: 0;
+	background-color: transparent;
+}
+
+.bar {
+	display: flex;
+	position: absolute;
+	height: 100%;
+margin-left: 25%;
+width: 5%;
+	background-color: black;
+}
+
+.stones_container {
+	display: flex;
+	position: absolute;
+	flex-wrap: wrap;
+	border-radius: 10px;
+	padding: 0 10px;
+	height: 100%;
+	width: 70%;
+	right: 0;
+	background-color: transparent;
+}
+
+.stone_container {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	text-transform: capitalize;
+	height: 7rem;
+	width: 5rem;
+	margin: 10px;
+
+}
+
+.stone {
+	position: absolute;
+	height: 5rem;
+	width: 100%;
+	box-shadow: 2px 2px 10px rgba(120, 8, 181, 0.5),
+		3px 3px 10px rgba(226, 4, 115, 0.5),
+		inset 2px 2px 2px rgba(67, 228, 198, 0.732);
+	border-radius: 5px;
+	border: var(--primary_outline) 2px solid;
+	z-index: 20;
+}
+
+.stone_label {
+	position: absolute;
+	color: #90074b;
+	height: 2rem;
+	width: 100%;
+	bottom: 0;
+	text-align: center;
+
+}
+
+.fire {
+	position: absolute;
+	background-size: cover;
+	background-image: url(assets/fire.png);
 }
