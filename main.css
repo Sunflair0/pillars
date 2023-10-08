@@ -3,10 +3,10 @@
 :root {
 	--primary_color: rgb(230, 230, 230);
 	--secondary_color:
-		linear-gradient(transparent 49.99%, #f4469dfb 50%, transparent 50.1%),
-		linear-gradient(transparent 45.9%, #ed238868 49.9%, transparent 53.1%),
-		radial-gradient(transparent 0%, #7a1547ca 50%, rgb(13, 2, 35) 80%),
-		radial-gradient(rgb(166, 182, 254) 60%, transparent 90%);
+		linear-gradient(transparent 49%, hsl(330, 65%, 65%) 50%, transparent 51%),
+		linear-gradient(transparent 45.9%, hsla(307, 36%, 55%, 0.553) 49.9%, transparent 53.1%),
+		radial-gradient(transparent 0%, hsla(330, 94%, 38%, 0.486) 30%, rgb(13, 2, 35) 45%),
+		radial-gradient(rgba(12, 45, 193, 0.9) 50%, transparent 100%);
 	--primary_outline: rgb(105, 105, 105);
 	--purple: rgb(189, 17, 238);
 	--white: rgb(227, 227, 227);
@@ -30,6 +30,33 @@ html {
 body {
 	background: rgb(0, 0, 0);
 	color: var(--white);
+}
+
+nav {
+	display: flex;
+	/* position: absolute; */
+	align-items: center;
+	justify-content: space-around;
+	text-transform: uppercase;
+	font-size: clamp(10px, 2vw, 14px);
+	margin-top: 1rem;
+	width: 100%;
+	/* border: 1px solid rgb(66, 65, 65); */
+	/* list-style: none; */
+}
+
+nav a:link, li a:link {
+	text-decoration: none;
+	color: white;
+	transition: .3s all;
+}
+
+nav a:visited, li a:visited {
+	color: var(--secondary_color);
+}
+
+nav a:hover, li a:hover {
+	color: rgb(0, 217, 255);
 }
 
 .but1 {
@@ -101,21 +128,68 @@ body {
 	background: var(--secondary_color);
 }
 
-.mid_top {
+.left_top {
 	display: flex;
 	position: absolute;
-	border-radius: 5%;
-	width: 90%;
+	border-radius: 5px;
+	width: 10%;
 	height: 17vh;
 	background: rgba(65, 60, 105, 0.3);
-	background-image: repeating-linear-gradient(90deg, rgba(95, 70, 237, 0.1) 0 3px, transparent 3px 40px),
-		repeating-linear-gradient(hsla(245, 65%, 65%, 0.65) 0px 1px, transparent 1px 36px);
+	background-image: repeating-linear-gradient(90deg, black 0 2px, rgba(95, 70, 237, 0.1) 2px 5px, transparent 5px 40px),
+		repeating-linear-gradient(black 0 2px, hsla(245, 65%, 65%, 0.65) 2px 3px, transparent 3px 36px);
 	border-top: 1px solid rgba(16, 16, 216, 0.65);
 	border-bottom: 1px solid rgba(16, 16, 216, 0.65);
 	border-right: 2px solid rgba(3, 3, 127, 0.65);
 	border-left: 2px solid rgba(3, 3, 127, 0.65);
+	box-shadow: black 3px 3px 1px, hsl(245, 100%, 72%) 5px 5px 3px, inset hsla(245, 100%, 72%, 0.27) 5px 5px 1px,
+		hsla(246, 100%, 98%, 0.5) 3px 3px 10px,
+		rgb(41, 48, 2) -2px -2px 5px;
+	margin: .75rem;
+	z-index: 1;
+}
+
+.mid_top {
+	display: flex;
+	position: absolute;
+	border-radius: 5%;
+	width: 40%;
+	height: 17vh;
+	background: rgba(65, 60, 105, 0.3);
+	background-image: repeating-linear-gradient(90deg, black 0 2px, rgba(95, 70, 237, 0.1) 2px 5px, transparent 5px 40px),
+		repeating-linear-gradient(black 0 2px, hsla(245, 65%, 65%, 0.65) 2px 3px, transparent 3px 36px);
+	border-top: 1px solid rgba(16, 16, 216, 0.65);
+	border-bottom: 1px solid rgba(16, 16, 216, 0.65);
+	border-right: 2px solid rgba(3, 3, 127, 0.65);
+	border-left: 2px solid rgba(3, 3, 127, 0.65);
+	box-shadow: black 3px 3px 1px, hsl(245, 100%, 72%) 5px 5px 3px, inset hsla(245, 100%, 72%, 0.27) 5px 5px 1px,
+		hsla(246, 100%, 98%, 0.5) 3px 3px 10px,
+		rgb(41, 48, 2) -2px -2px 5px;
 	margin: auto;
 	inset: 0;
+}
+
+.right_top {
+	display: flex;
+	position: absolute;
+	border-radius: 5%;
+	width: 20%;
+	height: 17vh;
+	background: rgba(65, 60, 105, 0.3);
+	background-image: repeating-linear-gradient(90deg, black 0 2px, rgba(95, 70, 237, 0.1) 2px 5px, transparent 5px 40px),
+		repeating-linear-gradient(black 0 2px, hsla(245, 65%, 65%, 0.65) 2px 3px, transparent 3px 36px);
+	border-top: 1px solid rgba(16, 16, 216, 0.65);
+	border-bottom: 1px solid rgba(16, 16, 216, 0.65);
+	border-right: 2px solid rgba(3, 3, 127, 0.65);
+	border-left: 2px solid rgba(3, 3, 127, 0.65);
+	box-shadow: hsla(245, 100%, 61%, 0.5) 2px 2px 1px,
+		hsla(246, 100%, 98%, 0.5) 2px 2px 10px,
+		rgb(41, 48, 2) -2px -2px 5px;
+	box-shadow: black 3px 3px 1px, hsl(245, 100%, 72%) 5px 5px 3px, inset hsla(245, 100%, 72%, 0.27) 5px 5px 1px,
+		hsla(246, 100%, 98%, 0.5) 3px 3px 10px,
+		rgb(41, 48, 2) -2px -2px 5px;
+	right: 0;
+	margin: .75rem;
+
 }
 
 .inside {
@@ -127,9 +201,10 @@ body {
 	width: 95%;
 	height: 75%;
 	background: rgba(65, 60, 105, 0.3);
-	background-image: repeating-linear-gradient(90deg, rgba(242, 241, 251, 0.12) 0 2px, transparent 2px 40px),
+	background-image: repeating-linear-gradient(90deg, rgba(12, 12, 12, 0.4) 0 2px, rgba(50, 81, 111, 0.12) 2px 4px, transparent 4px 40px),
 		repeating-linear-gradient(hsla(245, 53%, 17%, 0.3) 0px 1px, transparent 2px 16px);
 	border-left: 2px solid hsla(119, 85%, 38%, 0.553);
+
 	border-top: 2px solid hsla(119, 80%, 52%, 0.278);
 	border-right: 2px solid hsla(245, 65%, 65%, 0.145);
 	border-bottom: 2px solid hsla(245, 65%, 65%, 0.145);
@@ -137,7 +212,7 @@ body {
 	inset: 0;
 	filter: brightness(150%);
 	box-shadow: 2px 2px 2px black,
-		inset -2px -2px 2px rgba(34, 16, 6, 0.5),
+		inset -2px -2px 2px rgba(34, 16, 6, 0.5),ew
 		inset 3px 3px 2px rgba(2, 81, 80, 0.5);
 }
 
@@ -145,12 +220,13 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: #c4176b;
+	color: #64163c;
 	width: 100%;
-	-webkit-text-stroke: 2px #000000;
-	text-shadow: 2px 2px 1px rgb(93, 3, 44);
+font-family: 'Times New Roman', Times, serif;
+	-webkit-text-stroke: 1px hsla(0, 0%, 90%, 0.75);
+	text-shadow: 3px 3px 1px rgb(93, 3, 44);
 	-webkit-background-clip: text;
-	font-size: 27px;
+	font-size: 30px;
 	letter-spacing: 15px;
 	z-index: 2;
 }
@@ -163,8 +239,50 @@ body {
 	height: 78vh;
 	bottom: 0;
 	width: 100%;
-	background: linear-gradient(45deg, hsla(253, 78%, 67%, 0.4), hsla(56, 74%, 12%, 0.5));
+	background-image: linear-gradient(45deg, hsla(303, 100%, 50%, 0.25), hsla(253, 100%, 50%, 0.25), hsla(55, 100%, 50%, 0.25));
 
+}
+
+.overlay,
+.overlay2 {
+	opacity: .25;
+	display: flex;
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	/* border: 2px solid blue; */
+	background: repeating-linear-gradient(90deg, black 0 2px, rgb(115, 114, 114) 2px 3px, transparent 3px 40px);
+}
+
+.overlay2 {
+	position: absolute;
+	top: 49%;
+}
+
+.traveller:nth-child(1) {
+	margin-left: 40px;
+}
+
+.traveller {
+	text-align: center;
+	height: 60px;
+	width: 43px;
+	border: 1px solid rgb(115, 114, 114);
+	border-right: 5px solid rgba(67, 54, 117, 0.703);
+	background: rgba(230, 248, 90, 0.25);
+	backdrop-filter: blur(10px);
+	margin: 05rem 18.25px;
+	animation: travel calc(.075s * var(--i)) infinite alternate ease-in-out;
+}
+
+@keyframes travel {
+	from {
+		transform: translateY(0);
+	}
+
+	to {
+		transform: translateY(100%);
+	}
 }
 
 .sidebar {
@@ -172,7 +290,8 @@ body {
 	position: absolute;
 	border-radius: 10px;
 	padding: 0 10px;
-	width: 25%;
+	/* width: 25%; */
+	max-width: 30px;
 	height: 100%;
 	left: 0;
 	background-color: transparent;
@@ -182,12 +301,12 @@ body {
 	display: flex;
 	position: absolute;
 	height: 100%;
-margin-left: 25%;
-width: 5%;
+	margin-left: 25%;
+	width: 5%;
 	background-color: black;
 }
 
-.stones_container {
+.stones_container, .interloper, .glint, .population {
 	display: flex;
 	position: absolute;
 	flex-wrap: wrap;
@@ -214,26 +333,52 @@ width: 5%;
 	position: absolute;
 	height: 5rem;
 	width: 100%;
-	box-shadow: 2px 2px 10px rgba(120, 8, 181, 0.5),
+	/* box-shadow: 2px 2px 10px rgba(120, 8, 181, 0.5),
 		3px 3px 10px rgba(226, 4, 115, 0.5),
-		inset 2px 2px 2px rgba(67, 228, 198, 0.732);
+		inset 2px 2px 2px rgba(67, 228, 198, 0.732); */
 	border-radius: 5px;
-	border: var(--primary_outline) 2px solid;
-	z-index: 20;
+	box-shadow: inset 2px 2px 1px rgba(184, 10, 228, 0.553),
+		inset -2px -2px 1px rgba(7, 189, 165, 0.5);
+	background-image: hsla(245, 53%, 17%, 0.3);
+	border: 1px solid rgb(29, 220, 134);
+	transition: .3s all;
+}
+
+.stone:hover {
+	border-color: rgb(255, 221, 87);
+	background-image: transparent;
+}
+
+.stone::before {
+	content: '';
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background: hsla(202, 65%, 65%, 0.05);
+	border-radius: 5px;
 }
 
 .stone_label {
 	position: absolute;
-	color: #90074b;
+	font-family: Geneva, Verdana, sans-serif;
+	-webkit-text-stroke: #9e9e9e 1px;
+	color: #8f054a6e;
 	height: 2rem;
 	width: 100%;
 	bottom: 0;
 	text-align: center;
+}
 
+.stone_wrapper {
+	position: absolute;
+	inset: 0;
+	margin: auto;
+	background-size: cover;
+	width: 85%;
+	height: 85%;
+	z-index: -1;
 }
 
 .fire {
-	position: absolute;
-	background-size: cover;
 	background-image: url(assets/fire.png);
 }
