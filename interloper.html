@@ -10,48 +10,56 @@
 </head>
 
 <body>
-	<nav>
-		<a style="color:var(--primary_link);" href="index.html">
-			HOME
-		</a>
-		<a href="levels.html">
-			levels
-		</a>
-		<a href="transitions.html">
-			transitions
-		</a>
-		<a href="population.html">
-			populations
-		</a>
-		<a href="stats.html">
-			stats
-		</a>
-	</nav>
-	<div class="left_top">
-		<div class="inside">
-			<div class="inside">
-			</div>
-		</div>
-	</div>
-	<div class="left_top" style="margin-left: 12%;">
-		<div class="inside">
-		</div>
-	</div>
-	<div class="top">
-		<div class="mid_top">
-			<div class="words"> PILLARS</div>
-			<div class="inside">
+	<div class="shell">
+		<nav>
+			<a href="index.html">
+				HOME
+			</a>
+			<a href="stones.html">
+				stones
+			</a>
+			<a href="population.html">
+				population
+			</a>
+			<a style="color:var(--primary_link);" href="interloper.html">
+				interlopers
+			</a>
+			<a href="tech.html">
+				Tech
+			</a>
+			<a href="glint.html">
+				Glints
+			</a>
+			<a href="maps.html">
+				maps
+			</a>
+		</nav>
+		<div class="top">
+			<div class="left_top">
 				<div class="inside">
 					<div class="inside">
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="right_top">
-			<div class="inside">
+			<div class="left_top" style="margin-left: 12%;">
+				<div class="inside">
+				</div>
+			</div>
+			<div class="mid_top">
+				<div class="words"> PILLARS</div>
 				<div class="inside">
 					<div class="inside">
 						<div class="inside">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="right_top">
+				<div class="inside">
+					<div class="inside">
+						<div class="inside">
+							<div class="inside">
+							</div>
 						</div>
 					</div>
 				</div>
@@ -80,17 +88,37 @@
 			<div class="traveller" style="--i: 56"></div>
 		</div>
 		<div class="sidebar">
-			<ul>
-				<li><a href="stones.html">stones</a></li>
-				<li><a href="population.html">population</a></li>
-				<li><a href="glint.html">glint</a></li>
-				<li><a href="interloper.html" style="color:rgb(99, 117, 218);">interloper</a></li>
-				<li><a href="maps.html">maps</a></li>
-			
-</ul>
+			<form action="">
+				<ul>
+					<li><input type="radio" checked class="sidebar_radio" id="alignment" name="sidebar"
+							onchange="barChoice()" value="alignment">
+						<label for="alignment">alignment</label>
+					</li>
+					<li><input type="radio" class="sidebar_radio" id="mission" name="sidebar" onchange="barChoice()"
+							onchange="barChoice()" value="mission">
+						<label for="mission">mission</label>
+					</li>
+					<li><input type="radio" class="sidebar_radio" id="communicate" name="sidebar" onchange="barChoice()"
+							onchange="barChoice()" value="communicate">
+						<label for="communicate">communicate</label>
+					</li>
+					<li><input type="radio" class="sidebar_radio" id="wants" name="sidebar" onchange="barChoice()"
+							onchange="barChoice()" value="wants">
+						<label for="wants">wants</label>
+					</li>
+					<li><input type="radio" class="sidebar_radio" id="needs" name="sidebar" onchange="barChoice()"
+							onchange="barChoice()" value="needs">
+						<label for="needs">needs</label>
+					</li>
+					<li><input type="radio" class="sidebar_radio" id="appearance" name="sidebar" onchange="barChoice()"
+						onchange="barChoice()" value="appearance">
+					<label for="appearance">appearance</label>
+					</li>
+				</ul>
+			</form>
 		</div>
 		<div class="bar"></div>
-		<div class="interloper">
+		<div class="element_container">
 			<ol>
 				<li>anastasi</li>
 				<p>Evil. Will enslave. Powerful</p>
@@ -100,7 +128,8 @@
 				<p>colonists. will genetically change. </p>
 				<li>tolmists</li>
 				<p>colonists. will elevate. spoken and written words manifest power</p>
-
+				<li>hunger</li>
+				<p>devistation, will destroy, initial sharing good, seductive, ugly </p>
 			</ol>
 		</div>
 	</div>

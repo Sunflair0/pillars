@@ -10,45 +10,56 @@
 </head>
 
 <body>
-	<nav>
-		<a style="color:var(--primary_link);" href="index.html">
-			HOME
-		</a>
-		<a href="levels.html">
-			levels
-		</a>
-		<a href="transitions.html">
-			transitions
-		</a>
-		<a href="population.html">
-			populations
-		</a>
-	</nav>
-	<div class="left_top">
-		<div class="inside">
-			<div class="inside">
-			</div>
-		</div>
-	</div>
-	<div class="left_top" style="margin-left: 12%;">
-		<div class="inside">
-		</div>
-	</div>
-	<div class="top">
-		<div class="mid_top">
-			<div class="words"> PILLARS</div>
-			<div class="inside">
+	<div class="shell">
+		<nav>
+			<a href="index.html">
+				HOME
+			</a>
+			<a href="stones.html">
+				stones
+			</a>
+			<a style="color:var(--primary_link);" href="population.html">
+				population
+			</a>
+			<a href="interloper.html">
+				interlopers
+			</a>
+			<a href="tech.html">
+				Tech
+			</a>
+			<a href="glint.html">
+				Glints
+			</a>
+			<a href="maps.html">
+				maps
+			</a>
+		</nav>
+		<div class="top">
+			<div class="left_top">
 				<div class="inside">
 					<div class="inside">
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="right_top">
-			<div class="inside">
+			<div class="left_top" style="margin-left: 12%;">
+				<div class="inside">
+				</div>
+			</div>
+			<div class="mid_top">
+				<div class="words"> PILLARS</div>
 				<div class="inside">
 					<div class="inside">
 						<div class="inside">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="right_top">
+				<div class="inside">
+					<div class="inside">
+						<div class="inside">
+							<div class="inside">
+							</div>
 						</div>
 					</div>
 				</div>
@@ -77,16 +88,27 @@
 			<div class="traveller" style="--i: 56"></div>
 		</div>
 		<div class="sidebar">
-			<ul>
-				<li><a href="stones.html">stones</a></li>
-				<li><a href="population.html" style="color:rgb(99, 117, 218);">population</a></li>
-				<li><a href="glint.html">glint</a></li>
-				<li><a href="interloper.html">interloper</a></li>
-				<li><a href="maps.html">maps</a></li>
-
-			</ul>
+			<form action="">
+				<ul>
+					<li><input type="radio" checked class="sidebar_radio" id="all" name="sidebar" onchange="barChoice()"
+							value="all">
+						<label for="all">all</label>
+					</li>
+					<li><input type="radio" class="sidebar_radio" id="classes" name="sidebar" onchange="barChoice()"
+							value="classes">
+						<label for="classes">classes</label>
+					</li>
+					<li><input type="radio" class="sidebar_radio" id="progression" name="sidebar" onchange="barChoice()"
+							value="progression">
+						<label for="progression">progression</label>
+					</li>
+				</ul>
+			</form>
 		</div>
 		<div class="bar"></div>
+		<div class="element_container">
+		</div>
 	</div>
 </body>
+
 </html>
