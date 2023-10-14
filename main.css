@@ -144,7 +144,6 @@ li a:hover {
 	width: 100%;
 	top: 0;
 	height: 31.1vh;
-	border: #ffffff 1px solid;
 }
 
 .logos {
@@ -153,14 +152,13 @@ li a:hover {
 }
 
 .top {
+	display: flex;
+	position: absolute;
 	flex-direction: row;
 	width: 100%;
 	background: var(--secondary_color);
 	height: 24vh;
 	/* border: #ed10ea 2px solid; */
-
-	display: flex;
-	position: absolute;
 	margin: 3rem 0;
 	width: 100%;
 }
@@ -168,7 +166,7 @@ li a:hover {
 .left_top {
 	display: flex;
 	position: absolute;
-	border-radius: 5px;
+	border-radius: 5%;
 	width: 10%;
 	height: 17vh;
 	background: rgba(65, 60, 105, 0.3);
@@ -181,14 +179,14 @@ li a:hover {
 	box-shadow: black 3px 3px 1px, hsl(245, 100%, 72%) 5px 5px 3px, inset hsla(245, 100%, 72%, 0.27) 5px 5px 1px,
 		hsla(246, 100%, 98%, 0.5) 3px 3px 10px,
 		rgb(41, 48, 2) -2px -2px 5px;
-	margin: .75rem;
-	z-index: 1;
+	left: 0;
+	align-self: center;
+
 }
 
 .mid_top {
 	display: flex;
 	position: absolute;
-
 	border-radius: 5%;
 	width: 40%;
 	height: 17vh;
@@ -204,7 +202,6 @@ li a:hover {
 		rgb(41, 48, 2) -2px -2px 5px;
 	margin: auto;
 	inset: 0;
-	top: 0;
 }
 
 .right_top {
@@ -227,8 +224,7 @@ li a:hover {
 		hsla(246, 100%, 98%, 0.5) 3px 3px 10px,
 		rgb(41, 48, 2) -2px -2px 5px;
 	right: 0;
-	margin: 0 .75rem;
-	top: 0;
+	align-self: center;
 }
 
 .inside {
@@ -274,7 +270,7 @@ li a:hover {
 	position: relative;
 	/* flex-basis: auto; */
 	margin-top: 34vh;
-	height: 65vh;
+	height: 61vh;
 	bottom: 0;
 	width: 100%;
 	background-image: linear-gradient(45deg, hsla(303, 100%, 50%, 0.25), hsla(253, 100%, 50%, 0.25), hsla(55, 100%, 50%, 0.25));
@@ -740,23 +736,45 @@ li a:hover {
 }
 
 .atom {
-	height: 80%;
-	width: 30%;
+	height: 10px;
+	width: 10px;
+	background-image: radial-gradient(circle, rgb(0, 0, 255), rgba(0, 0, 0, 0.87));
+	transform: skewy(300deg);
 	border: rgb(8, 116, 205) 3px solid;
 	border-radius: 50%;
+	animation: skewa 3s linear infinite;
+}
+
+@keyframes skewa {
+	from {
+		transform: rotate(0deg) translate(30px) rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg) translate(30px) rotate(0deg);
+	}
 }
 
 .atom::before,
 .atom::after {
 	content: '';
 	border: inherit;
-	border-radius: 50%;
-	height: 106.5%;
-	width: 106.5%;
+	border-radius: 20%;
+	margin: 1rem;
+	height: inherit;
+	width: inherit;
 	position: absolute;
-	rotate: 60deg;
+	/* rotate: 60deg; */
 }
 
 .atom::after {
-	rotate: 120deg;
+	/* rotate: 120deg; */
+	margin: .5rem;
+}
+
+footer {
+bottom: 0;
+height: 5vh;
+color: whitesmoke;
+background-color: black;
 }
