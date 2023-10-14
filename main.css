@@ -11,8 +11,6 @@
 	--purple: rgb(189, 17, 238);
 	--white: rgb(227, 227, 227);
 	--pulse: #766ce0;
-
-
 }
 
 *,
@@ -24,7 +22,7 @@
 }
 
 html {
-	font-family: "Notable";
+	font-family: "Notable", 'Times New Roman', Times, serif;
 }
 
 body {
@@ -34,12 +32,13 @@ body {
 
 nav {
 	display: flex;
-	/* position: absolute; */
+	position: absolute;
 	align-items: center;
 	justify-content: space-around;
 	text-transform: uppercase;
 	font-size: clamp(10px, 2vw, 14px);
 	margin-top: 1rem;
+	margin-bottom: 1rem;
 	width: 100%;
 	/* border: 1px solid rgb(66, 65, 65); */
 	/* list-style: none; */
@@ -139,12 +138,31 @@ li a:hover {
 	transition: .2s ease-out all;
 }
 
-.top {
+.shell {
 	display: flex;
-	position: relative;
+	position: absolute;
 	width: 100%;
-	height: 20vh;
+	top: 0;
+	height: 31.1vh;
+	border: #ffffff 1px solid;
+}
+
+.logos {
+	display: flex;
+
+}
+
+.top {
+	flex-direction: row;
+	width: 100%;
 	background: var(--secondary_color);
+	height: 24vh;
+	/* border: #ed10ea 2px solid; */
+
+	display: flex;
+	position: absolute;
+	margin: 3rem 0;
+	width: 100%;
 }
 
 .left_top {
@@ -170,6 +188,7 @@ li a:hover {
 .mid_top {
 	display: flex;
 	position: absolute;
+
 	border-radius: 5%;
 	width: 40%;
 	height: 17vh;
@@ -185,6 +204,7 @@ li a:hover {
 		rgb(41, 48, 2) -2px -2px 5px;
 	margin: auto;
 	inset: 0;
+	top: 0;
 }
 
 .right_top {
@@ -207,8 +227,8 @@ li a:hover {
 		hsla(246, 100%, 98%, 0.5) 3px 3px 10px,
 		rgb(41, 48, 2) -2px -2px 5px;
 	right: 0;
-	margin: .75rem;
-
+	margin: 0 .75rem;
+	top: 0;
 }
 
 .inside {
@@ -252,9 +272,9 @@ li a:hover {
 .lower_container {
 	display: flex;
 	position: relative;
-	flex-basis: auto;
-	margin-top: 2vh;
-	height: 78vh;
+	/* flex-basis: auto; */
+	margin-top: 34vh;
+	height: 65vh;
 	bottom: 0;
 	width: 100%;
 	background-image: linear-gradient(45deg, hsla(303, 100%, 50%, 0.25), hsla(253, 100%, 50%, 0.25), hsla(55, 100%, 50%, 0.25));
@@ -337,6 +357,7 @@ li a:hover {
 	width: 70%;
 	right: 0;
 	background-color: transparent;
+	overflow-y: auto;
 }
 
 .interloper,
@@ -414,38 +435,39 @@ li a:hover {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 80%;
 	aspect-ratio: 1;
-	border: 3px dotted gold;
-outline: goldenrod 3px dotted;
-outline-offset: -15px;
-	border-radius: 30%;
+	border: 4px dotted rgb(200, 210, 3);
+	outline: rgb(180, 141, 42) 3px dotted;
+	outline-offset: -7px;
+	border-radius: 54% 64% 60% 40%/ 45% 37% 55% 70%;
 	position: absolute;
 	animation: turning 6s linear infinite;
 }
 
 .nano::before {
 	content: '';
-	border: 3px dotted gold;
-outline: goldenrod 3px dotted;
-outline-offset: -15px;
+	border: 2px dotted gold;
+	outline: rgb(255, 219, 60) 3px dotted;
+	outline-offset: -5px;
 	position: absolute;
-	width: 97%;
+	width: 85%;
 	aspect-ratio: 1;
-	border-radius: 50%;
-	animation: turning 6s 2s linear infinite;
+	border-radius: 70% 44% 60% 47%/ 45% 57% 55% 70%;
+	animation: turning 5s 2s ease-in-out infinite;
 }
 
 .nano::after {
 	content: '';
-	border: 3px dotted gold;
-outline: goldenrod 3px dotted;
-outline-offset: -15px;
+	border: 2px dotted rgb(255, 220, 19);
+	outline: rgb(232, 244, 9) 2px dotted;
+	outline-offset: -11px;
 	position: absolute;
-	width: 100%;
+	width: 65%;
 	rotate: 75deg;
 	aspect-ratio: 1;
-	border-radius: 30%;
-	animation: turning 6s 4s linear infinite;
+	border-radius: 51%;
+	animation: turning 4s 4s ease-in-out infinite;
 }
 
 @keyframes turning {
@@ -484,7 +506,7 @@ outline-offset: -15px;
 	width: 150%;
 	aspect-ratio: 1;
 	border-radius: 100%;
-    transform: rotateX(65deg);
+	transform: rotateX(65deg);
 	transform-style: preserve-3d;
 	animation: turning1 15s linear infinite;
 	transform-origin: 50% 50%;
@@ -509,16 +531,36 @@ outline-offset: -15px;
 	transform-style: preserve-3d;
 }
 
+.stationTop {
+	clip-path: polygon(50% 0%, 80% 10%, 100% 33%, 100% 46%, 92% 53%, 56% 30%, 8% 53%, 0 40%, 0 46%, 0 33%, 20% 10%);
+}
+
+.station {
+	background-image: url(assets/station.png);
+}
+
+.dna {
+	background-image: url(assets/dna.png);
+}
+
+.milky {
+	background-image: url(assets/milkyway.jpg);
+}
+
 .oil {
-margin: auto;
-inset: 0;
- width: 60%;
-  height: 60%;
-  border-radius: 0 50% 50% 50%;
-  border: 2px solid rgb(31, 40, 83);
-  transform: rotate(45deg);
-background: linear-gradient(rgba(2, 2, 149, 0.75), rgba(1, 127, 127, 0.75), rgb(0, 0, 132), rgb(132, 116, 204));
-  /* margin-top: 20px; */
+	margin: auto;
+	inset: 0;
+	width: 60%;
+	height: 60%;
+	border-radius: 0 50% 50% 50%;
+	border: 2px solid rgb(31, 40, 83);
+	transform: rotate(45deg);
+	background: linear-gradient(rgba(2, 2, 149, 0.75), rgba(1, 127, 127, 0.75), rgb(0, 0, 132), rgb(132, 116, 204));
+	/* margin-top: 20px; */
+}
+
+.weather {
+	background-image: url(assets/weather.png);
 }
 
 .wheel {
@@ -547,69 +589,174 @@ background: linear-gradient(rgba(2, 2, 149, 0.75), rgba(1, 127, 127, 0.75), rgb(
 }
 
 .united {
-position: absolute;
-width: 85%;
-height: 85%;
-border-right: rgb(29, 172, 194) 3px solid;
+	position: absolute;
+	width: 85%;
+	height: 85%;
+	border-right: rgb(29, 172, 194) 3px solid;
 
-outline: #000000 2px solid;
-outline-offset: -15px;
-background: radial-gradient(white, gold, rgba(153, 131, 7, 0.659), rgb(3, 24, 255), transparent);
-border-radius: 50%;
-box-shadow: #07c596 2px 2px 5px, #07c596 -2px -2px 5px, inset #055843 1px 1px 10px, inset #055843 -1px -1px 10px,  inset #055843 1px -1px 10px, inset #055843 -1px 1px 10px;
+	outline: #000000 2px solid;
+	outline-offset: -15px;
+	background: radial-gradient(white, gold, rgba(153, 131, 7, 0.659), rgb(3, 24, 255), transparent);
+	border-radius: 50%;
+	box-shadow: #07c596 2px 2px 5px, #07c596 -2px -2px 5px, inset #055843 1px 1px 10px, inset #055843 -1px -1px 10px, inset #055843 1px -1px 10px, inset #055843 -1px 1px 10px;
+	animation: turning 70s linear infinite;
+
+}
+
+.united::before,
+.united::after {
+	content: '';
+	margin: auto;
+	inset: 0;
+	position: absolute;
+	border-radius: 50%;
+	border: 5px dotted black;
+	box-shadow: inset rgba(1, 0, 0, 0.6) 2px 2px 5px, inset rgba(1, 0, 0, 0.6) -2px 2px 5px;
+
+	width: 90%;
+	height: 90%;
+}
+
+.united::after {
+	border: 5px dotted yellow;
+	transform: rotate(20deg);
+}
+
+.dyson {
+	position: absolute;
+	width: 70%;
+	height: 70%;
+	outline: #db090993 15px dotted;
+	outline-offset: -15px;
+	background: radial-gradient(rgb(176, 241, 44), rgb(255, 183, 0), rgb(229, 107, 31), rgba(70, 60, 2, 0.385), transparent);
+	border-radius: 50%;
+	box-shadow: #07c596 2px 2px 3px, #07c596 2px 2px 30px, #07c596 -2px -2px 3px, #07c596 -2px -2px 30px, inset #000000 1px 1px 5px, inset #000000 -1px -1px 5px;
 	animation: turning 80s linear infinite;
 
 }
 
-.united::before, .united::after {
-content: '';
-margin: auto;
-inset: 0;
-position: absolute;
-border-radius: 50%;
-border: 5px dotted black;
-box-shadow: inset rgba(1, 0, 0, 0.6) 2px 2px 5px, inset rgba(1, 0, 0, 0.6) -2px 2px 5px;
-
-width: 90%;
-height: 90%;
-}
-
-.united::after{
-border: 5px dotted yellow;
-transform: rotate(20deg);
-}
-
-.dyson {
-position: absolute;
-width: 70%;
-height: 70%;
-outline: #db090993 15px dotted;
-outline-offset: -15px;
-background: radial-gradient(rgb(176, 241, 44), rgb(255, 183, 0) , rgb(229, 107, 31), rgba(70, 60, 2, 0.385), transparent);
-border-radius: 50%;
-box-shadow: #07c596 2px 2px 3px,#07c596 2px 2px 30px, #07c596 -2px -2px 3px,#07c596 -2px -2px 30px, inset #000000 1px 1px 5px, inset #000000 -1px -1px 5px;
-	animation: turning 90s linear infinite;
-
-}
-
-.dyson::before, .dyson::after {
-content: '';
-margin: auto;
-inset: 0;
-position: absolute;
-outline: #000000 7px dotted;
-outline-offset: -2px;
-border-radius: 50%;
-box-shadow: inset rgb(1, 0, 0) 2px 2px 10px;
-background: repeating-linear-gradient(black 0 2.7px, transparent 2.7px 9px),
-repeating-linear-gradient(90deg, black 0 2.7px, transparent 2.7px 9px);
-border: 12px dotted rgba(255, 213, 0, 0.8);
-width: 90%;
-height: 90%;
+.dyson::before,
+.dyson::after {
+	content: '';
+	margin: auto;
+	inset: 0;
+	position: absolute;
+	outline: #000000 7px dotted;
+	outline-offset: -2px;
+	border-radius: 50%;
+	box-shadow: inset rgb(1, 0, 0) 2px 2px 10px;
+	background: repeating-linear-gradient(black 0 2.7px, transparent 2.7px 9px),
+		repeating-linear-gradient(90deg, black 0 2.7px, transparent 2.7px 9px);
+	border: 12px dotted rgba(255, 213, 0, 0.8);
+	width: 90%;
+	height: 90%;
 }
 
 .dyson::after {
-outline: #3f0b0b6d 15px dotted;
-outline-offset: 3px;
-border: #ec6629c2 5px dotted;
-transform: rotate(45deg);}
+	outline: #3f0b0b6d 15px dotted;
+	outline-offset: 3px;
+	border: #ec6629c2 5px dotted;
+	transform: rotate(45deg);
+}
+
+.sun {
+	width: 80%;
+	height: 80%;
+	border: 1px solid rgb(255, 255, 146);
+	border-top: white 1px solid;
+	border-radius: 50%;
+	box-shadow: inset rgb(217, 245, 36) 2px 2px 10px,
+		2px 2px 5px rgba(219, 245, 48, 0.893), 2px 2px 10px rgb(255, 255, 0);
+	background-image: radial-gradient(ellipse at 65% 10px, rgb(255, 223, 196), rgba(231, 243, 14, 0.863) 15%, transparent 30%),
+		radial-gradient(ellipse at 40% 30%, rgba(101, 91, 45, 0.866), rgba(245, 111, 62, 0.849) 5%, transparent 30%),
+		radial-gradient(ellipse at 80% 15px, rgba(237, 88, 2, 0.75), rgba(255, 119, 69, 0.829) 5%, transparent 30%),
+		radial-gradient(ellipse at 60% 10px, rgba(224, 84, 8, 0.912), rgba(224, 166, 19, 0.6) 25%, transparent 70%),
+		radial-gradient(ellipse at 50% 50px, rgba(238, 111, 111, 0.75), rgba(255, 174, 0, 0.6) 5%, transparent 30%),
+		radial-gradient(rgb(255, 242, 0), rgb(217, 255, 4), yellow);
+}
+
+.sun::before,
+.sun::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	border: 1px solid rgb(222, 246, 8);
+}
+
+.stellar {
+	width: 80%;
+	height: 80%;
+	background-image: radial-gradient(rgb(255, 255, 255) 3%, transparent 5%, rgb(0, 0, 0), transparent 25%, rgb(11, 11, 22) 65%, transparent 70%), repeating-conic-gradient(rgb(0, 0, 0) 12.5%, rgb(67, 77, 192) 18%, rgb(210, 34, 202) 25%);
+	border-radius: 30%;
+}
+
+.yellow {
+	background-image: url(assets/yelloweclipse.png);
+}
+
+.red {
+	background-image: url(assets/redeclipse.png);
+}
+
+.blue {
+	background-image: url(assets/blueeclipse.png);
+}
+
+.wormhole,
+.wormhole1 {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: #000000;
+}
+
+.wormhole::before,
+.wormhole1::before {
+	content: '';
+	opacity: 1;
+	position: absolute;
+	margin: auto;
+	inset: 0;
+	width: 80%;
+	height: 80%;
+	background-image: repeating-radial-gradient(circle at 50%, black, transparent 7px, black 5px, transparent 4px),
+		conic-gradient(rgb(2, 2, 114), aqua, rgb(64, 87, 55), rgb(2, 2, 114), aqua, rgb(64, 87, 55), rgb(2, 2, 114), aqua, rgb(64, 87, 55), rgb(2, 2, 114));
+	border-radius: 50%;
+	animation: vibrate 1s alternate infinite;
+}
+
+.wormhole::before {
+	animation: turning 8s linear infinite;
+
+}
+
+@keyframes vibrate {
+	to {
+		rotate: 45deg;
+		opacity: 0.2;
+	}
+}
+
+.atom {
+	height: 80%;
+	width: 30%;
+	border: rgb(8, 116, 205) 3px solid;
+	border-radius: 50%;
+}
+
+.atom::before,
+.atom::after {
+	content: '';
+	border: inherit;
+	border-radius: 50%;
+	height: 106.5%;
+	width: 106.5%;
+	position: absolute;
+	rotate: 60deg;
+}
+
+.atom::after {
+	rotate: 120deg;
+}
