@@ -310,13 +310,13 @@ li a:hover {
 .overlay2 {
 	display: flex;
 	position: absolute;
-	opacity: .25;
+	opacity: .2;
 	height: 50%;
 	background: repeating-linear-gradient(90deg, black 0 2px, rgb(115, 114, 114) 2px 3px, transparent 3px 40px);
 }
 
 .overlay2 {
-margin-top: 5px;
+	margin-top: 5px;
 	top: 49%;
 }
 
@@ -325,26 +325,64 @@ margin-top: 5px;
 }
 
 .traveller {
+	opacity: .6;
 	text-align: center;
 	height: 43px;
 	width: 43px;
-	border: 1px solid rgb(102, 117, 252);
-	border-right: 5px solid rgba(35, 52, 241, 0.5);
-	border-bottom: 5px solid rgba(35, 52, 241, 0.5);
-	background: rgba(6, 28, 153, 0.25);
-	filter: drop-shadow(10px 10px rgb(0, 0, 0));
-	margin: 5rem 18.25px;
+	border: 2px solid rgb(250, 132, 216);
+	border-right: 4px solid rgba(35, 52, 241, 0.9);
+	border-bottom: 4px solid rgba(35, 52, 241, 0.8);
+	background: rgba(101, 103, 113, 0.14);
+	margin: 5rem 38.5px;
 	border-radius: 6px;
 	animation: travel calc(.075s * var(--i)) infinite alternate ease-in-out;
 }
 
+.traveller_shadow {
+	text-align: center;
+	height: 43px;
+	width: 43px;
+	transform: translate(-30px, -70px);
+	border: 2px solid rgb(168, 58, 153);
+	border-right: 3px solid rgba(35, 52, 241, 0.7);
+	border-bottom: 3px solid rgba(35, 52, 241, 0.6);
+	background: rgba(255, 60, 245, 0.079);
+	margin: 5rem 38.5px;
+	border-radius: 6px;
+}
+
+.traveller::before {
+	content: '';
+	width: 14px;
+	height: 2px;
+	transform: translate(-10px, 18px);
+	background-color: rgb(188, 185, 185);
+	position: absolute;
+	filter: drop-shadow(25px -26px 0px rgb(46, 135, 245));
+	box-shadow: inset 0px 0px 5px rgb(193, 58, 164);
+	rotate: 45deg;
+}
+
+.traveller_shadow::before {
+	content: '';
+	width: 14px;
+	height: 2px;
+	transform: translate(1px, 44.5px);
+	background-color: rgb(157, 157, 157);
+	position: absolute;
+	filter: drop-shadow(28px -28px 0px rgb(66, 39, 239));
+
+	box-shadow: inset 0px 0px 0px rgba(206, 21, 178, 0.89);
+	rotate: 45deg;
+}
+
 @keyframes travel {
 	from {
-		transform: translateY(0);
+		transform: translateY(-100%);
 	}
 
 	to {
-		transform: translateY(100%);
+		transform: translateY(180%);
 	}
 }
 
