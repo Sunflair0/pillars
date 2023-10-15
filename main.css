@@ -63,8 +63,6 @@ nav {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 	width: 100%;
-	/* border: 1px solid rgb(66, 65, 65); */
-	/* list-style: none; */
 }
 
 nav a:link,
@@ -177,8 +175,6 @@ li a:hover {
 	transition: .2s ease-out all;
 }
 
-
-
 .shell {
 	display: flex;
 	position: absolute;
@@ -216,7 +212,6 @@ li a:hover {
 		rgb(41, 48, 2) -2px -2px 5px;
 	left: 1rem;
 	align-self: center;
-
 }
 
 .mid_top {
@@ -308,20 +303,20 @@ li a:hover {
 	bottom: 0;
 	width: 100%;
 	background-image: linear-gradient(45deg, hsla(303, 100%, 50%, 0.25), hsla(253, 100%, 50%, 0.25), hsla(55, 100%, 50%, 0.25));
+	overflow: hidden;
 }
 
 .overlay,
 .overlay2 {
-	opacity: .25;
 	display: flex;
 	position: absolute;
-	width: 100%;
+	opacity: .25;
 	height: 50%;
 	background: repeating-linear-gradient(90deg, black 0 2px, rgb(115, 114, 114) 2px 3px, transparent 3px 40px);
 }
 
 .overlay2 {
-	position: absolute;
+margin-top: 5px;
 	top: 49%;
 }
 
