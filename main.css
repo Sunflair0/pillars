@@ -37,14 +37,15 @@ html {
 
 ::-webkit-scrollbar-track {
 	background-color: transparent;
-	/* -webkit-border-radius: 10px;
-    border-radius: 10px; */
+	-webkit-border-radius: 10px;
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
 	-webkit-border-radius: 10px;
-	border-radius: 10px;
-	background: #ae00b4;
+	border-radius: 15px;
+	background: #fc9dff;
+	box-shadow: inset black 4px 2px 5px, inset black -2px -2px 5px;
 	transition: .3s all;
 }
 
@@ -131,6 +132,7 @@ li a:hover {
 		inset 0px -5px 1px rgba(111, 172, 225, 0.303),
 		inset -7px 0px 3px rgba(141, 115, 180, 0.336);
 	transition: .2s ease-out all;
+	cursor: pointer;
 }
 
 .but1 {
@@ -536,8 +538,8 @@ li a:hover {
 
 .stone:hover {
 	border-color: rgb(238, 192, 8);
-	background-image: transparent;
-	outline: 3px rgba(124, 160, 238, 0.878) solid;
+	background-image: blue;
+	outline: 3px rgba(124, 160, 238, 0.85) solid;
 	outline-offset: -7px;
 	border-radius: 50px;
 	overflow: hidden;
@@ -558,6 +560,7 @@ li a:hover {
 	-webkit-text-stroke: #9e9e9e 1px;
 	color: #8f054a6e;
 	font-size: clamp(10px, 1.6vw, 36px);
+margin: auto;
 
 	height: 2rem;
 	width: 100%;
@@ -573,6 +576,60 @@ li a:hover {
 	width: 85%;
 	height: 85%;
 	z-index: -1;
+}
+
+.rainbow_city {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.red {
+	height: 150px;
+	width: 120px;
+	background-image: radial-gradient(circle at 50% 80%, yellow, orange, red);
+	border: black solid 5px;
+}
+
+.orange {
+	height: 150px;
+	width: 120px;
+	background-image: radial-gradient(circle at 50% 80%, rgb(65, 255, 78), rgb(238, 255, 0), rgb(255, 136, 0));
+	border: black solid 5px;
+}
+
+.yellow {
+	height: 150px;
+	width: 120px;
+	background-image: radial-gradient(circle at 50% 80%, rgb(4, 255, 0), rgb(157, 255, 0), rgb(222, 255, 6));
+	border: black solid 5px;
+}
+
+.green {
+	height: 150px;
+	width: 120px;
+	background-image: radial-gradient(circle at 50% 80%, rgb(0, 123, 255), rgb(0, 255, 136), rgb(0, 255, 26));
+	border: black solid 5px;
+}
+
+.blue {
+	height: 150px;
+	width: 120px;
+	background-image: radial-gradient(circle at 50% 80%, rgb(230, 0, 255), rgb(140, 0, 255), blue);
+	border: black solid 5px;
+}
+
+.indigo {
+	height: 150px;
+	width: 120px;
+	background-image: radial-gradient(circle at 50% 80%, rgb(255, 0, 115), rgb(255, 0, 221), indigo);
+	border: black solid 5px;
+}
+
+.violet {
+	height: 150px;
+	width: 120px;
+	background-image: radial-gradient(circle at 50% 80%, rgb(221, 255, 0), rgb(255, 0, 162), violet);
+	border: black solid 5px;
 }
 
 footer {
