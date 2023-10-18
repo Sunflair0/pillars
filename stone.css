@@ -1,0 +1,459 @@
+.yellow {
+	background-image: url(assets/yelloweclipse.png);
+}
+
+.red {
+	background-image: url(assets/redeclipse.png);
+}
+
+.blue {
+	background-image: url(assets/blueeclipse.png);
+}
+
+.wormhole,
+.wormhole1 {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: #000000;
+}
+
+.wormhole::before,
+.wormhole1::before {
+	content: '';
+	opacity: 1;
+	position: absolute;
+	margin: auto;
+	inset: 0;
+	width: 80%;
+	height: 80%;
+	background-image: repeating-radial-gradient(circle at 50%, black, transparent 7px, black 5px, transparent 4px),
+		conic-gradient(rgb(2, 2, 114), aqua, rgb(64, 87, 55), rgb(2, 2, 114), aqua, rgb(64, 87, 55), rgb(2, 2, 114), aqua, rgb(64, 87, 55), rgb(2, 2, 114));
+	border-radius: 50%;
+	animation: vibrate 1s alternate infinite;
+}
+
+.wormhole::before {
+	animation: turning 8s linear infinite;
+
+}
+
+@keyframes vibrate {
+	to {
+		rotate: 45deg;
+		opacity: 0.2;
+	}
+}
+
+.atom {
+	height: 2px;
+	width: 2px;
+	background-image: rgb(192, 192, 192);
+	border: rgb(225, 238, 248) 2px solid;
+	border-radius: 50%;
+	filter: blur(2px);
+	animation: skewa 1s linear infinite;
+}
+
+.proton {
+	position: absolute;
+	border: #28187a 2px solid;
+	border-radius: 50%;
+	inset: 0;
+	margin: auto;
+	outline: 1px solid rgb(165, 173, 255);
+	outline-offset: 15px;
+	height: 30px;
+	width: 30px;
+	filter: blur(3px);
+	background-image: radial-gradient(circle, rgb(85, 85, 184), rgb(98, 98, 98));
+}
+
+@keyframes skewa {
+	from {
+		transform: rotate(0deg) translate(30px);
+	}
+
+	to {
+		transform: rotate(360deg) translate(30px);
+	}
+}
+
+.grid {
+	position: absolute;
+	height: 80%;
+	width: 80%;
+	transform: rotateX(55deg);
+	background-image: repeating-linear-gradient(transparent 0 4px, rgb(129, 129, 129) 4px 5px, transparent 5px 9px),
+		repeating-linear-gradient(90deg, transparent 0 4px, rgb(139, 139, 139) 4px 5px, transparent 5px 9px);
+}
+
+.sub_atomic {
+	position: absolute;
+	border: #240d86 3px solid;
+	border-radius: 50%;
+	height: 17px;
+	width: 17px;
+	filter: blur(3px);
+	margin-top: 20%;
+	transform-origin: -90px 050px;
+	background: rgb(147, 160, 227);
+	animation: sub .05s infinite alternate;
+}
+
+.sub_atomic::before,
+.sub_atomic::after {
+	content: '';
+	position: absolute;
+	border: #240d86 3px solid;
+	border-radius: 50%;
+	rotate: 10deg;
+	height: 15px;
+	width: 15px;
+	filter: blur(3px);
+background: rgb(147, 160, 227);
+	transform-origin: -100px 100px;
+	animation: sub .08s .07s infinite alternate;
+}
+
+.sub_atomic::after {
+	transform-origin: -90px -110px;
+}
+
+@keyframes sub {
+	from {
+		transform: rotate(0deg) translate(0px, 0px);
+	}
+
+	to {
+		transform: rotate(1deg) translate(0px, 1px);
+	}
+}
+
+.sub_atom {
+	position: absolute;
+	/* border: #f0ebeb 1px dotted; */
+	border-radius: 50%;
+	height: 7px;
+	width: 7px;
+	filter: blur(1px) drop-shadow(0px -10px 1px rgb(61, 15, 212))brightness(5000%);
+	margin-top: 20%;
+z-index: 10;
+	rotate: 0deg;
+	transform-origin: -100px 050px;
+	background: rgb(147, 160, 227);
+	animation: sub .05s infinite alternate;
+}
+
+.sub_atom::before,
+.sub_atom::after {
+	content: '';
+	position: absolute;
+	border-radius: 50%;
+	rotate: 9deg;
+	height: 10px;
+	width: 10px;
+z-index: 10;
+	filter: blur(0px) drop-shadow(20px -10px 1px rgb(21, 47, 238))brightness(5000%);
+	background: rgb(48, 12, 228);
+	box-shadow: 12px 0px 2px rgb(225, 11, 11);
+	transform-origin: -10px -60px;
+	animation: sub .08s .07s infinite alternate;
+}
+
+.sub_atom::after {
+	transform-origin: -70px -20px;
+	animation-delay: .05s;
+}
+
+
+.fmoon {
+	background-image: url(assets/fmoon.png);
+}
+
+.fire {
+	background-image: url(assets/fire.png);
+}
+
+.camp {
+	background-image: url(assets/camp1.png);
+}
+
+.health {
+	background-image: url(assets/health.png);
+}
+
+.farm {
+	background-image: url(assets/sheaves.png);
+
+}
+
+.earth {
+	background-image: url(assets/earth.png);
+}
+
+.educate {
+	background-image: url(assets/educate.png);
+}
+
+.sub_atomic {
+	background-image: url(assets/subatomic.png);
+}
+
+.nano {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80%;
+	aspect-ratio: 1;
+	border: 4px dotted rgb(200, 210, 3);
+	outline: rgb(180, 141, 42) 3px dotted;
+	outline-offset: -7px;
+	border-radius: 54% 64% 60% 40%/ 45% 37% 55% 70%;
+	position: absolute;
+	animation: turning 6s linear infinite;
+}
+
+.nano::before {
+	content: '';
+	border: 2px dotted gold;
+	outline: rgb(255, 219, 60) 3px dotted;
+	outline-offset: -5px;
+	position: absolute;
+	width: 85%;
+	aspect-ratio: 1;
+	border-radius: 70% 44% 60% 47%/ 45% 57% 55% 70%;
+	animation: turning 5s 2s ease-in-out infinite;
+}
+
+.nano::after {
+	content: '';
+	border: 2px dotted rgb(255, 220, 19);
+	outline: rgb(232, 244, 9) 2px dotted;
+	outline-offset: -11px;
+	position: absolute;
+	width: 65%;
+	rotate: 75deg;
+	aspect-ratio: 1;
+	border-radius: 51%;
+	animation: turning 4s 4s ease-in-out infinite;
+}
+
+@keyframes turning {
+
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+
+}
+
+@keyframes turning1 {
+
+	0% {
+		transform: perspective(50px) rotatez(360deg) rotateY(10deg) translateZ(5px);
+	}
+
+	100% {
+		transform: perspective(50px) rotatez(0deg) rotateY(10deg) translateZ(5px);
+
+	}
+
+}
+
+.ring {
+	border: 5px dotted rgb(109, 86, 32);
+	outline-offset: -4px;
+	outline: 5px double rgb(109, 86, 32);
+	position: absolute;
+	left: -25%;
+	top: -20%;
+	width: 150%;
+	aspect-ratio: 1;
+	border-radius: 100%;
+	transform: rotateX(65deg);
+	transform-style: preserve-3d;
+	animation: turning1 15s linear infinite;
+	transform-origin: 50% 50%;
+}
+
+.ball {
+	position: absolute;
+	border: #07c596 1px solid;
+	border-radius: 50%;
+	inset: 0;
+	margin: auto;
+	width: 50%;
+	height: 50%;
+	aspect-ratio: 1;
+	animation: turnin1 5s linear reverse;
+	background: radial-gradient(blue, #07c596);
+}
+
+.perspective {
+	perspective: 100px;
+	transform-style: preserve-3d;
+}
+
+.stationTop {
+	clip-path: polygon(50% 0%, 80% 10%, 100% 33%, 100% 46%, 92% 53%, 56% 30%, 8% 53%, 0 40%, 0 46%, 0 33%, 20% 10%);
+}
+
+.station {
+	background-image: url(assets/station.png);
+}
+
+.dna {
+	background-image: url(assets/dna.png);
+}
+
+.milky {
+	background-image: url(assets/milkyway.jpg);
+}
+
+.oil {
+	margin: auto;
+	inset: 0;
+	width: 60%;
+	height: 60%;
+	border-radius: 0 50% 50% 50%;
+	border: 2px solid rgb(31, 40, 83);
+	transform: rotate(45deg);
+	background: linear-gradient(rgba(2, 2, 149, 0.75), rgba(1, 127, 127, 0.75), rgb(0, 0, 132), rgb(132, 116, 204));
+	/* margin-top: 20px; */
+}
+
+.weather {
+	background-image: url(assets/weather.png);
+}
+
+.wheel {
+	width: 50px;
+	height: 50px;
+	background: radial-gradient(circle at 48.5% 24px, #bf950e 12%, 12%, black 2%, rgba(209, 172, 38, 0.4) 20%, rgba(0, 0, 0, 0.3) 35%), repeating-conic-gradient(black, #af890d 45deg);
+	position: absolute;
+	border: 2px solid black;
+	outline-offset: .5px;
+	outline: 2px solid #af8704;
+	border-radius: 50px;
+	animation: turning 15s ease-in-out infinite;
+}
+
+.wheel::before {
+	content: "";
+	position: absolute;
+	outline-offset: -2px;
+	outline: 2px solid rgba(199, 156, 3, 0.748);
+	border-radius: 50%;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+.united {
+	position: absolute;
+	width: 85%;
+	height: 85%;
+	border-right: rgb(29, 172, 194) 3px solid;
+
+	outline: #000000 2px solid;
+	outline-offset: -15px;
+	background: radial-gradient(white, gold, rgba(153, 131, 7, 0.659), rgb(3, 24, 255), transparent);
+	border-radius: 50%;
+	box-shadow: #07c596 2px 2px 5px, #07c596 -2px -2px 5px, inset #055843 1px 1px 10px, inset #055843 -1px -1px 10px, inset #055843 1px -1px 10px, inset #055843 -1px 1px 10px;
+	animation: turning 70s linear infinite;
+
+}
+
+.united::before,
+.united::after {
+	content: '';
+	margin: auto;
+	inset: 0;
+	position: absolute;
+	border-radius: 50%;
+	border: 5px dotted black;
+	box-shadow: inset rgba(1, 0, 0, 0.6) 2px 2px 5px, inset rgba(1, 0, 0, 0.6) -2px 2px 5px;
+
+	width: 90%;
+	height: 90%;
+}
+
+.united::after {
+	border: 5px dotted yellow;
+	transform: rotate(20deg);
+}
+
+.dyson {
+	position: absolute;
+	width: 70%;
+	height: 70%;
+	outline: #db090993 15px dotted;
+	outline-offset: -15px;
+	background: radial-gradient(rgb(176, 241, 44), rgb(255, 183, 0), rgb(229, 107, 31), rgba(70, 60, 2, 0.385), transparent);
+	border-radius: 50%;
+	box-shadow: #07c596 2px 2px 3px, #07c596 2px 2px 30px, #07c596 -2px -2px 3px, #07c596 -2px -2px 30px, inset #000000 1px 1px 5px, inset #000000 -1px -1px 5px;
+	animation: turning 80s linear infinite;
+
+}
+
+.dyson::before,
+.dyson::after {
+	content: '';
+	margin: auto;
+	inset: 0;
+	position: absolute;
+	outline: #000000 7px dotted;
+	outline-offset: -2px;
+	border-radius: 50%;
+	box-shadow: inset rgb(1, 0, 0) 2px 2px 10px;
+	background: repeating-linear-gradient(black 0 2.7px, transparent 2.7px 9px),
+		repeating-linear-gradient(90deg, black 0 2.7px, transparent 2.7px 9px);
+	border: 12px dotted rgba(255, 213, 0, 0.8);
+	width: 90%;
+	height: 90%;
+}
+
+.dyson::after {
+	outline: #3f0b0b6d 15px dotted;
+	outline-offset: 3px;
+	border: #ec6629c2 5px dotted;
+	transform: rotate(45deg);
+}
+
+.sun {
+	width: 80%;
+	height: 80%;
+	border: 1px solid rgb(255, 255, 146);
+	border-top: white 1px solid;
+	border-radius: 50%;
+	box-shadow: inset rgb(217, 245, 36) 2px 2px 10px,
+		2px 2px 5px rgba(219, 245, 48, 0.893), 2px 2px 10px rgb(255, 255, 0);
+	background-image: radial-gradient(ellipse at 65% 10px, rgb(255, 223, 196), rgba(231, 243, 14, 0.863) 15%, transparent 30%),
+		radial-gradient(ellipse at 40% 30%, rgba(101, 91, 45, 0.866), rgba(245, 111, 62, 0.849) 5%, transparent 30%),
+		radial-gradient(ellipse at 80% 15px, rgba(237, 88, 2, 0.75), rgba(255, 119, 69, 0.829) 5%, transparent 30%),
+		radial-gradient(ellipse at 60% 10px, rgba(224, 84, 8, 0.912), rgba(224, 166, 19, 0.6) 25%, transparent 70%),
+		radial-gradient(ellipse at 50% 50px, rgba(238, 111, 111, 0.75), rgba(255, 174, 0, 0.6) 5%, transparent 30%),
+		radial-gradient(rgb(255, 242, 0), rgb(217, 255, 4), yellow);
+}
+
+.sun::before,
+.sun::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	border: 1px solid rgb(222, 246, 8);
+}
+
+.stellar {
+	width: 80%;
+	height: 80%;
+	background-image: radial-gradient(rgb(255, 255, 255) 3%, transparent 5%, rgb(0, 0, 0), transparent 25%, rgb(11, 11, 22) 65%, transparent 70%), repeating-conic-gradient(rgb(0, 0, 0) 12.5%, rgb(67, 77, 192) 18%, rgb(210, 34, 202) 25%);
+	border-radius: 30%;
+}

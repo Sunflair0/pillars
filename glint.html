@@ -66,7 +66,7 @@
 			</div>
 		</div>
 	</div>
-<div class="lower_container">
+	<div class="lower_container">
 		<div class="overlay">
 			<div class="traveller" style="--i: 25">
 				<div class="traveller_shadow"></div>
@@ -107,6 +107,12 @@
 			<div class="traveller" style="--i: 50">
 				<div class="traveller_shadow"></div>
 			</div>
+			<div class="traveller" style="--i: 27">
+				<div class="traveller_shadow"></div>
+			</div>
+			<div class="traveller" style="--i: 90">
+				<div class="traveller_shadow"></div>
+			</div>
 		</div>
 		<div class="overlay2">
 			<div class="traveller" style="--i: 57">
@@ -145,10 +151,38 @@
 			<div class="traveller" style="--i: 48">
 				<div class="traveller_shadow"></div>
 			</div>
+			<div class="traveller" style="--i: 25">
+				<div class="traveller_shadow"></div>
+			</div>
+			<div class="traveller" style="--i: 100">
+				<div class="traveller_shadow"></div>
+			</div>
+			<div class="traveller" style="--i: 40">
+				<div class="traveller_shadow"></div>
+			</div>
 		</div>
 		<div class="sidebar">
+			<form action="">
+				<ul>
+					<li><input type="radio" checked class="sidebar_radio" id="all" name="sidebar" onchange="barChoice()"
+							value="all">
+						<label for="all">all</label>
+					</li>
+					<li><input type="radio" class="sidebar_radio" id="classes" name="sidebar" onchange="barChoice()"
+							value="classes">
+						<label for="classes">classes</label>
+					</li>
+					<li><input type="radio" class="sidebar_radio" id="progression" name="sidebar" onchange="barChoice()"
+							value="progression">
+						<label for="progression">progression</label>
+					</li>
+				</ul>
+			</form>
+		</div>
+		<div class="bar">
 			<button class="adj"></button>
 		</div>
+
 		<div class="right_container">
 			<header class="info_banner">
 				Glints represent higher levels where you can see hidden factors that effect your
