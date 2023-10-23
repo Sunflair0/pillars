@@ -62,7 +62,7 @@ body {
 label {
 	margin: .1rem .5rem;
 	font-size: clamp(10px, 2vw, 36px);
-	background: radial-gradient(circle, #069004, #058ca7);
+	background: radial-gradient(circle, #63d861, #42ceea, rgb(148, 121, 144));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 
@@ -527,6 +527,7 @@ li a:hover {
 
 .stone_wrapper {
 	position: absolute;
+perspective: 1000px;
 	transform-style: preserve-3d;
 	height: 2rem;
 	width: 2rem;
@@ -545,7 +546,7 @@ li a:hover {
 	height: 2rem;
 	width: 2rem;
 	border-radius: 5px;
-	background: hsla(190, 86%, 72%, 0.115);
+	background: linear-gradient(40deg, hsla(190, 86%, 72%, 0.115), rgba(10, 239, 189, 0.2), hsla(190, 86%, 72%, 0.115));
 	outline: 3px rgb(0, 0, 0) solid;
 	outline-offset: -3px;
 	box-shadow: inset 2px 2px 1px rgba(184, 10, 228, 0.553),

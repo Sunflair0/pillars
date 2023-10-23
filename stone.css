@@ -360,7 +360,9 @@
 }
 
 .milky {
-	background-image: url(assets/milkyway.jpg);
+scale: 1.2;
+filter: brightness(1.5);
+	background-image: url(assets/milkyway.png);
 }
 
 .oil {
