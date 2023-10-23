@@ -1,9 +1,9 @@
 .yellow_sun {
-	background-image: url(assets/yelloweclipse.png);
+	background-image: url(assets/yelloweclipse1.png);
 }
 
 .red_sun {
-	background-image: url(assets/redeclipse.png);
+	background-image: url(assets/redeclipse1.png);
 }
 
 .blue_sun {
@@ -15,11 +15,12 @@
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	background-color: #000000;
 }
 
 .wormhole::before,
-.wormhole1::before {
+.wormhole1::before,
+.wormhole::after,
+.wormhole1::after {
 	content: '';
 	opacity: 1;
 	position: absolute;
@@ -27,21 +28,50 @@
 	inset: 0;
 	width: 80%;
 	height: 80%;
-	background-image: repeating-radial-gradient(circle at 50%, black, transparent 7px, black 5px, transparent 4px),
-		conic-gradient(rgb(2, 2, 114), aqua, rgb(64, 87, 55), rgb(2, 2, 114), aqua, rgb(64, 87, 55), rgb(2, 2, 114), aqua, rgb(64, 87, 55), rgb(2, 2, 114));
 	border-radius: 50%;
-	animation: vibrate 1s alternate infinite;
+	animation: starter 1.5s alternate infinite;
+}
+
+.wormhole::before,
+.wormhole1::before {
+	border-radius: 50%;
+	bottom: 2.5%;
+	left: 5%;
+	opacity: 0.6;
+	border: 1px rgb(25, 94, 243) solid;
+	height: 90%;
+	width: 90%;
+	background-image: repeating-radial-gradient(circle at 50%, black, transparent 7px, black 5px, transparent 4px),
+		repeating-conic-gradient(rgb(2, 2, 114) 33%, rgb(0, 255, 255) 66%, rgb(64, 87, 55) 66%);
+
 }
 
 .wormhole::before {
 	animation: turning 8s linear infinite;
-
 }
 
-@keyframes vibrate {
+.wormhole::after,
+.wormhole1::after {
+	width: 90%;
+	height: auto;
+	aspect-ratio: 1/1;
+	top: 55%;
+	left: 30%;
+	border: 1px solid white;
+	background: radial-gradient(circle at 100% 80%, rgba(123, 247, 214, 0.5),
+			rgba(204, 232, 22, 0.125) 55%),
+		radial-gradient(circle at 20% 10%,
+			rgba(255, 255, 255, 0.75) 14%,
+			transparent 24%);
+	transform: translateX(-20px) translateY(-20px) skewX(-5deg);
+	filter: blur(6px);
+	animation: none;
+}
+
+@keyframes starter {
 	to {
-		rotate: 45deg;
-		opacity: 0.2;
+		rotate: 60deg;
+		opacity: 0;
 	}
 }
 
@@ -79,6 +109,25 @@
 	}
 }
 
+.sanitation {
+	position: absolute;
+	height: 80%;
+	width: 80%;
+	inset: 0;
+	margin: auto;
+	background-image: linear-gradient(#5d6f85, #b1b9bc);
+}
+
+.smith {
+
+	background-image: linear-gradient(#00797A, #00B4B3);
+}
+
+.metal {
+
+	background-image: linear-gradient(-30deg, #9f0505 30%, #f95631, #9f0505 70%);
+}
+
 .grid {
 	position: absolute;
 	height: 80%;
@@ -97,7 +146,7 @@
 	height: 19px;
 	width: 19px;
 	filter: blur(3px);
-	margin-top: 20%;
+	margin-top: -40%;
 	transform-origin: -90px 050px;
 	background: rgb(147, 148, 227);
 	animation: sub .04s infinite alternate;
@@ -143,9 +192,9 @@
 	margin-top: 20%;
 	z-index: 10;
 	rotate: 5deg;
-	transform-origin: -50px 50px;
+	transform-origin: -50px -250px;
 	background: rgb(147, 160, 227);
-	animation: sub .05s infinite alternate;
+	animation: sub .002s infinite alternate;
 }
 
 .sub_atom::before,
@@ -161,7 +210,7 @@
 	background: rgb(255, 255, 255);
 	box-shadow: 12px 0px 3px rgb(255, 255, 255);
 	transform-origin: -140px 120px;
-	animation: sub .01s .11s infinite alternate;
+	animation: sub .002s .11s infinite alternate;
 }
 
 .sub_atom::after {
@@ -323,14 +372,14 @@
 	border-radius: 0 50% 50% 50%;
 	border: 3px solid rgb(32, 7, 1);
 	transform: rotate(45deg);
-	background: radial-gradient(rgba(238, 243, 147, 0.75) 0%, rgba(137, 133, 19, 0.7) 30%, rgb(69, 37, 5)60%, rgb(69, 37, 5) 100%);
+	background: radial-gradient(rgba(238, 243, 147, 0.75) 0%, rgba(182, 119, 9, 0.7) 30%, rgba(69, 37, 5, 0.7)60%, rgba(27, 21, 3, 0.4) 100%);
 	margin-top: 20px;
 }
 
 .oil_backdrop {
 	width: 80%;
 	height: 80%;
-	background-image: radial-gradient(orange 30%, rgba(162, 143, 23, 0.504), transparent 90%);
+	background-image: radial-gradient(rgba(246, 188, 80, 0.7) 50%, #4b3004e7, transparent 90%);
 	margin: auto;
 	inset: 0;
 }
@@ -348,6 +397,7 @@
 	outline-offset: .5px;
 	outline: 2px solid #af8704;
 	border-radius: 50px;
+animation: none;
 	animation: turning 15s ease-in-out infinite;
 }
 

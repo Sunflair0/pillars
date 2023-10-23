@@ -2,18 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Inter:wght@500&family=Lora:ital,wght@1,500&family=Noto+Sans+Symbols&family=Open+Sans&family=Roboto&family=Oswald&family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&display=swap');
 
-
 :root {
+	--bg: rgb(10, 8, 27);
 	--primary_color: rgb(230, 230, 230);
 	--primary_link: rgb(189, 17, 238);
 	--secondary_color:
 		linear-gradient(transparent 49%, hsl(330, 100%, 91%) 50%, transparent 51%),
 		linear-gradient(transparent 45.9%, hsla(307, 36%, 55%, 0.553) 49.9%, transparent 53.1%),
-		radial-gradient(transparent 0%, hsla(330, 94%, 38%, 0.486) 30%, rgb(0, 0, 0) 45%),
+	
+		radial-gradient(transparent 0%, hsla(330, 94%, 38%, 0.486) 30%, rgb(10, 8, 27) 45%),
 		radial-gradient(rgba(12, 45, 193, 0.9) 50%, transparent 100%);
 	--primary_outline: rgb(105, 105, 105);
 	--purple: rgb(189, 17, 238);
-	--white: rgb(227, 227, 227);
+	--white: rgb(161, 157, 112);
 	--pulse: #766ce0;
 }
 
@@ -38,7 +39,7 @@ html {
 ::-webkit-scrollbar-track {
 	background-color: transparent;
 	-webkit-border-radius: 10px;
-    border-radius: 10px;
+	border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -54,13 +55,16 @@ html {
 }
 
 body {
-	background: rgb(0, 0, 0);
+	background-color: rgb(10, 8, 27);
 	color: var(--white);
 }
 
 label {
 	margin: .1rem .5rem;
 	font-size: clamp(10px, 2vw, 36px);
+	background: radial-gradient(circle, #069004, #058ca7);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 
 }
 
@@ -206,7 +210,7 @@ li a:hover {
 	height: 31vh;
 }
 
-.top {
+.top-half {
 	display: flex;
 	position: absolute;
 	flex-direction: row;
@@ -292,7 +296,6 @@ li a:hover {
 	background-image: repeating-linear-gradient(90deg, rgba(12, 12, 12, 0.4) 0 2px, rgba(50, 81, 111, 0.12) 2px 4px, transparent 4px 40px),
 		repeating-linear-gradient(hsla(245, 53%, 17%, 0.3) 0px 1px, transparent 2px 16px);
 	border-left: 2px solid hsla(119, 85%, 38%, 0.553);
-
 	border-top: 2px solid hsla(119, 80%, 52%, 0.278);
 	border-right: 2px solid hsla(245, 65%, 65%, 0.145);
 	border-bottom: 2px solid hsla(245, 65%, 65%, 0.145);
@@ -307,11 +310,11 @@ li a:hover {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: #64163c;
+	color: #8c878ca7;
 	width: 100%;
 	font-family: 'Times New Roman', Times, serif;
-	-webkit-text-stroke: 1px hsla(0, 0%, 90%, 0.75);
-	text-shadow: 3px 3px 1px rgb(93, 3, 44);
+	-webkit-text-stroke: 2px hsla(0, 0%, 0%, 0.75);
+	text-shadow: 3px 3px 1px rgb(164, 175, 255);
 	-webkit-background-clip: text;
 	font-size: 30px;
 	letter-spacing: 15px;
@@ -319,7 +322,6 @@ li a:hover {
 }
 
 .lower_container {
-
 	display: flex;
 	position: relative;
 	margin-top: 36vh;
@@ -439,7 +441,9 @@ li a:hover {
 	height: 100%;
 	margin-left: 25%;
 	width: 5%;
-	background-color: rgb(11, 8, 11);
+	background-color: var(--bg);
+	box-shadow: 0px 0 60px rgba(72, 138, 218, 0.571),
+		inset 4px 0 1px black;
 }
 
 .right_container {
@@ -459,13 +463,10 @@ li a:hover {
 	width: 75%;
 	font-family: 'Times New Roman', Times, serif;
 	font-size: clamp(10px, 1.8vw, 30px);
-	padding: 1rem 2rem;
 	border-bottom: 5px solid rgb(0, 0, 0);
 	background: linear-gradient(rgba(72, 138, 218, 0.571) 0%, rgba(31, 31, 214, 0.2) 8%, rgba(0, 0, 0, 0.5) 18%, rgba(0, 0, 0, 0.3) 87%, rgba(14, 106, 211, 0.2) 100%);
-}
-
-.info_banner- {
-	height: 20vh;
+	padding: 1rem .5rem;
+	overflow-y: auto;
 }
 
 .sidebar_radio {
@@ -476,24 +477,13 @@ li a:hover {
 .sidebar li {
 	text-transform: uppercase;
 	font-size: clamp(10px, .6vw, 36px);
-
+	text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.371);
 	font-family: "Lora", Geneva, Tahoma, sans-serif;
-	margin-top: 1.5rem;
+	margin-top: .5rem;
 }
 
 .sidebar li:hover {
 	color: #8bf5ff;
-}
-
-.stone_container {
-	display: flex;
-	flex-direction: column;
-	position: relative;
-	top: 2vh;
-	text-transform: capitalize;
-	height: 4.25rem;
-	width: 2rem;
-	margin: 20px 10px 0;
 }
 
 .content_container {
@@ -522,27 +512,85 @@ li a:hover {
 	transition: .3s all;
 }
 
+.stone_container {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	top: 2vh;
+	text-transform: capitalize;
+	height: 3.75rem;
+	width: 2rem;
+	margin: .5rem;
+	perspective: 1000px;
+	perspective-origin: 50% calc(50% - 200px);
+}
+
+.stone_wrapper {
+	position: absolute;
+	transform-style: preserve-3d;
+	height: 2rem;
+	width: 2rem;
+	animation: cube 120s infinite linear;
+}
+
+@keyframes cube {
+
+	100% {
+		rotate: y 360deg;
+	}
+}
+
 .stone {
 	position: absolute;
 	height: 2rem;
-	width: 100%;
+	width: 2rem;
 	border-radius: 5px;
+	background: hsla(190, 86%, 72%, 0.115);
 	outline: 3px rgb(0, 0, 0) solid;
-	outline-offset: -2px;
+	outline-offset: -3px;
 	box-shadow: inset 2px 2px 1px rgba(184, 10, 228, 0.553),
 		inset -2px -2px 1px rgba(7, 189, 165, 0.5);
 	background-image: hsla(245, 53%, 17%, 0.3);
-	border: 1px solid rgb(29, 220, 134);
+	border: 2px solid rgb(29, 220, 134);
 	transition: .3s all;
 }
 
+.left {
+	right: 1rem;
+	rotate: y -90deg;
+}
+
+.right {
+	left: 1rem;
+	rotate: y 90deg;
+}
+
+.top {
+	bottom: 1rem;
+	rotate: x 90deg;
+background: hsla(216, 20%, 53%, 0.344);
+}
+
+.bottom {
+	top: 1rem;
+	rotate: x -90deg;
+background: hsla(257, 62%, 15%, 0.7);
+}
+
+.front {
+	translate: 0 0 1rem;
+	/* perspective: 1000px; */
+	transform-style: preserve-3d;
+}
+
+.back {
+	translate: 0 0 -1rem;
+}
+
 .stone:hover {
-	border-color: rgb(238, 192, 8);
-	background-image: blue;
-	outline: 3px rgba(124, 160, 238, 0.85) solid;
-	outline-offset: -7px;
-	border-radius: 50px;
+	outline-offset: -1px;
 	overflow: hidden;
+	animation-play-state: paused;
 }
 
 .stone::before {
@@ -554,28 +602,32 @@ li a:hover {
 	border-radius: 5px;
 }
 
+.stone_item {
+	display: flex;
+	position: absolute;
+	justify-content: center;
+	align-items: center;
+	inset: 0;
+	margin: auto;
+	background-size: cover;
+	translate: 0 0 -1rem;
+	width: 85%;
+	height: 85%;
+	animation: cube 120s linear infinite reverse;
+}
+
 .stone_label {
+	display: flex;
 	position: absolute;
 	font-family: Geneva, Verdana, sans-serif;
 	-webkit-text-stroke: #9e9e9e 1px;
 	color: #8f054a6e;
 	font-size: clamp(10px, 1.6vw, 36px);
-margin: auto;
-
-	height: 2rem;
+	justify-content: center;
+	height: 1.5rem;
 	width: 100%;
 	bottom: 0;
 	text-align: center;
-}
-
-.stone_wrapper {
-	position: absolute;
-	inset: 0;
-	margin: auto;
-	background-size: cover;
-	width: 85%;
-	height: 85%;
-	z-index: -1;
 }
 
 .rainbow_city {
@@ -586,49 +638,66 @@ margin: auto;
 .red {
 	height: 150px;
 	width: 120px;
-	background-image: radial-gradient(circle at 50% 80%, yellow, orange, red);
+	background-image: radial-gradient(circle at 50% 95%, yellow, orange, red);
+	box-shadow: inset rgba(0, 0, 0) 20px -20px 2px;
+
 	border: black solid 5px;
 }
 
 .orange {
 	height: 150px;
 	width: 120px;
-	background-image: radial-gradient(circle at 50% 80%, rgb(65, 255, 78), rgb(238, 255, 0), rgb(255, 136, 0));
+	background-image: radial-gradient(circle at 50% 95%, rgb(135, 255, 65), rgb(238, 255, 0), rgb(255, 136, 0));
+	box-shadow: inset rgba(0, 0, 0) -20px -20px 2px;
 	border: black solid 5px;
 }
 
 .yellow {
 	height: 150px;
 	width: 120px;
-	background-image: radial-gradient(circle at 50% 80%, rgb(4, 255, 0), rgb(157, 255, 0), rgb(222, 255, 6));
+	background-image: radial-gradient(circle at 50% 95%, rgb(4, 255, 0), rgb(157, 255, 0), rgb(222, 255, 6));
+	box-shadow: inset rgba(0, 0, 0) 20px -20px 2px;
 	border: black solid 5px;
 }
 
 .green {
 	height: 150px;
 	width: 120px;
-	background-image: radial-gradient(circle at 50% 80%, rgb(0, 123, 255), rgb(0, 255, 136), rgb(0, 255, 26));
+	background-image: radial-gradient(circle at 50% 95%, rgb(0, 123, 255), rgb(66, 249, 164), rgb(0, 255, 26));
+	box-shadow: inset rgba(0, 0, 0) -20px -20px 2px;
 	border: black solid 5px;
 }
 
 .blue {
 	height: 150px;
 	width: 120px;
-	background-image: radial-gradient(circle at 50% 80%, rgb(230, 0, 255), rgb(140, 0, 255), blue);
+	background-image: radial-gradient(circle at 50% 95%, rgb(230, 0, 255), rgb(140, 0, 255), blue);
+	box-shadow: inset rgba(0, 0, 0) 20px -20px 2px;
 	border: black solid 5px;
 }
 
 .indigo {
 	height: 150px;
 	width: 120px;
-	background-image: radial-gradient(circle at 50% 80%, rgb(255, 0, 115), rgb(255, 0, 221), indigo);
+	background-image: radial-gradient(circle at 50% 95%, rgb(251, 30, 111), rgb(251, 80, 228), rgb(99, 4, 168));
+	box-shadow: inset rgba(0, 0, 0) -20px -20px 2px;
 	border: black solid 5px;
 }
 
 .violet {
 	height: 150px;
 	width: 120px;
-	background-image: radial-gradient(circle at 50% 80%, rgb(221, 255, 0), rgb(255, 0, 162), violet);
+	background-image: radial-gradient(circle at 50% 95%, rgb(255, 0, 43), rgb(249, 28, 168), rgb(255, 173, 255));
+	box-shadow: inset rgba(0, 0, 0) 20px -20px 2px;
+	border: black solid 5px;
+
+}
+
+.connect {
+	height: 150px;
+	width: 120px;
+	background-image: radial-gradient(circle at 50% 95%, rgb(240, 82, 20), rgb(255, 97, 126), rgb(244, 40, 132));
+	box-shadow: inset rgba(0, 0, 0) -20px -20px 2px;
 	border: black solid 5px;
 }
 
