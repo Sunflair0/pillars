@@ -3,7 +3,7 @@
 }
 
 .red_sun {
-	background-image: url(assets/redeclipse1.png);
+	background-image: url(assets/redeclipse.png);
 }
 
 .blue_sun {
@@ -76,12 +76,12 @@
 }
 
 .atom {
-	height: 2px;
-	width: 2px;
-	background-image: rgb(192, 192, 192);
-	border: rgb(225, 238, 248) 2px solid;
+	height: 0px;
+	width: 0px;
+	background-image: rgb(255, 255, 255);
+	border: rgb(255, 255, 255) 2px solid;
 	border-radius: 50%;
-	filter: blur(2px);
+	filter: blur(1px);
 	animation: skewa 1s linear infinite;
 }
 
@@ -306,12 +306,25 @@
 @keyframes turning1 {
 
 	0% {
-		transform: perspective(10) rotatey(0deg);
+		transform: translatex(2px) translateZ(20px) rotatez(0deg);
 	}
 
 	100% {
-		transform: perspective(10) rotatey(360deg);
+		transform: translateY(2px) translateZ(20px) rotatez(360deg);
+	}
 
+}
+
+@keyframes turning2 {
+
+	0% {
+
+		transform: rotatey(0deg) translateY(10px);
+	}
+
+	100% {
+
+		transform: rotatey(-360deg) translateY(10px);
 	}
 
 }
@@ -322,13 +335,35 @@
 	outline-offset: -3px;
 	outline: 6px double rgb(109, 86, 32);
 	position: absolute;
-	height: 150%;
-	width: 150%;
+	height: 78%;
+	width: 78%;
+	translate: 0 0px -1.5rem;
+	rotate: x 70deg;
+	transform-style: preserve-3d;
 	inset: 0;
 	margin: auto;
 	border-radius: 100%;
-	animation: turning1 5s linear infinite;
-	transform-origin: 48% 50%;
+	animation: turning1 20s linear infinite;
+}
+
+.ring::before {
+	content: "";
+	position: absolute;
+	border: #02b58856 1px solid;
+	border-radius: 50%;
+	inset: 0;
+	margin: auto;
+	width: 80%;
+
+	height: 80%;
+	rotate: x -90deg;
+	background: radial-gradient(blue, #07c596);
+	animation: turning2 20s reverse linear infinite;
+
+}
+
+.ringScene {
+	transform: translate(20px, 50px);
 }
 
 .ball {
@@ -339,12 +374,12 @@
 	margin: auto;
 	width: 50%;
 	height: 50%;
-	animation: turnin1 5s linear reverse;
 	background: radial-gradient(blue, #07c596);
 }
 
 .perspective {
-	perspective: 100px;
+	perspective: 60px;
+	transform-style: preserve-3d;
 }
 
 .stationTop {
@@ -360,8 +395,8 @@
 }
 
 .milky {
-scale: 1.2;
-filter: brightness(1.5);
+	scale: 1.2;
+	filter: brightness(1.5);
 	background-image: url(assets/milkyway.png);
 }
 
@@ -381,7 +416,7 @@ filter: brightness(1.5);
 .oil_backdrop {
 	width: 80%;
 	height: 80%;
-	background-image: radial-gradient(rgba(246, 188, 80, 0.7) 50%, #4b3004e7, transparent 90%);
+	background-image: radial-gradient(rgba(246, 188, 80, 0.7) 50%, #271903e7, transparent 90%);
 	margin: auto;
 	inset: 0;
 }
@@ -399,7 +434,7 @@ filter: brightness(1.5);
 	outline-offset: .5px;
 	outline: 2px solid #af8704;
 	border-radius: 50px;
-animation: none;
+	animation: none;
 	animation: turning 15s ease-in-out infinite;
 }
 
@@ -424,7 +459,6 @@ animation: none;
 	width: 85%;
 	height: 85%;
 	border-right: rgb(29, 172, 194) 3px solid;
-
 	outline: #000000 2px solid;
 	outline-offset: -15px;
 	background: radial-gradient(white, gold, rgba(153, 131, 7, 0.659), rgb(3, 24, 255), transparent);
@@ -443,7 +477,6 @@ animation: none;
 	border-radius: 50%;
 	border: 5px dotted black;
 	box-shadow: inset rgba(1, 0, 0, 0.6) 2px 2px 5px, inset rgba(1, 0, 0, 0.6) -2px 2px 5px;
-
 	width: 90%;
 	height: 90%;
 }

@@ -5,16 +5,16 @@
 :root {
 	--bg: rgb(10, 8, 27);
 	--primary_color: rgb(230, 230, 230);
-	--primary_link: rgb(189, 17, 238);
+	--primary_link: #6a47f8;
 	--secondary_color:
 		linear-gradient(transparent 49%, hsl(330, 100%, 91%) 50%, transparent 51%),
 		linear-gradient(transparent 45.9%, hsla(307, 36%, 55%, 0.553) 49.9%, transparent 53.1%),
-	
 		radial-gradient(transparent 0%, hsla(330, 94%, 38%, 0.486) 30%, rgb(10, 8, 27) 45%),
 		radial-gradient(rgba(12, 45, 193, 0.9) 50%, transparent 100%);
 	--primary_outline: rgb(105, 105, 105);
 	--purple: rgb(189, 17, 238);
-	--white: rgb(161, 157, 112);
+	--menu: #a38fab;
+	--text: rgb(202, 202, 202);
 	--pulse: #766ce0;
 }
 
@@ -56,16 +56,17 @@ html {
 
 body {
 	background-color: rgb(10, 8, 27);
-	color: var(--white);
+	color: var(--text);
+	text-shadow: #000000 0 0 2px;
 }
 
 label {
-	margin: .1rem .5rem;
-	font-size: clamp(10px, 2vw, 36px);
-	background: radial-gradient(circle, #63d861, #42ceea, rgb(148, 121, 144));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-
+	margin-left: .5rem;1
+	color: #1d0836;
+	font-family: "Alumni Sans Collegiate One";
+	font-size: clamp(10px, 3.5vw, 40px);
+	text-shadow: #8bf5ff 2px 2px 5px;
+	cursor: pointer;
 }
 
 nav {
@@ -91,14 +92,6 @@ li a:link {
 	margin-left: .5rem;
 }
 
-ol li {
-	margin-left: 1.5rem;
-	color: #150836;
-	font-family: "Alumni Sans Collegiate One";
-	font-size: 40px;
-	text-shadow: #8bf5ff 2px 2px 5px;
-}
-
 ol p {
 	padding-bottom: 1.5rem;
 	font-size: clamp(10px, 1.6vw, 36px);
@@ -107,17 +100,19 @@ ol p {
 }
 
 ul {
-	list-style: none;
+	list-style: radial-gradient(rgb(25, 13, 43) 31%, #9186ef 57%, #2e4449 63%, transparent 71%);
+	background-size: 2.5px 3px;
 }
 
 nav a:visited,
 li a:visited {
-	color: var(--secondary_color);
+	color: var(--menu);
 }
 
 nav a:hover,
 li a:hover {
-	color: rgb(0, 217, 255);
+	text-shadow: 0 0 50px rgb(0, 217, 255);
+	color: #c5c1e9;
 }
 
 .adj {
@@ -214,7 +209,7 @@ li a:hover {
 	display: flex;
 	position: absolute;
 	flex-direction: row;
-	width: 100%;
+	width: 80%;
 	background: var(--secondary_color);
 	height: 12vh;
 	margin: 3rem 0;
@@ -463,8 +458,8 @@ li a:hover {
 	width: 75%;
 	font-family: 'Times New Roman', Times, serif;
 	font-size: clamp(10px, 1.8vw, 30px);
-	border-bottom: 5px solid rgb(0, 0, 0);
-	background: linear-gradient(rgba(72, 138, 218, 0.571) 0%, rgba(31, 31, 214, 0.2) 8%, rgba(0, 0, 0, 0.5) 18%, rgba(0, 0, 0, 0.3) 87%, rgba(14, 106, 211, 0.2) 100%);
+	border-bottom: 3px solid rgb(0, 0, 0);
+	background: linear-gradient(rgba(4, 0, 255, 0.55) 0%, rgba(6, 6, 121, 0.47) 4%, rgba(4, 14, 54, 0.744) 12%, rgba(0, 0, 0, 0.3) 87%, rgba(14, 14, 211, 0.558) 100%);
 	padding: 1rem .5rem;
 	overflow-y: auto;
 }
@@ -474,7 +469,7 @@ li a:hover {
 	position: absolute;
 }
 
-.sidebar li {
+.sidebar1 {
 	text-transform: uppercase;
 	font-size: clamp(10px, .6vw, 36px);
 	text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.371);
@@ -527,7 +522,6 @@ li a:hover {
 
 .stone_wrapper {
 	position: absolute;
-perspective: 1000px;
 	transform-style: preserve-3d;
 	height: 2rem;
 	width: 2rem;
@@ -546,7 +540,8 @@ perspective: 1000px;
 	height: 2rem;
 	width: 2rem;
 	border-radius: 5px;
-	background: linear-gradient(40deg, hsla(190, 86%, 72%, 0.115), rgba(10, 239, 189, 0.2), hsla(190, 86%, 72%, 0.115));
+	background: linear-gradient(-40deg, rgba(65, 220, 220, 0.15) 10%, transparent 40%, transparent 60%, rgba(0, 128, 128, 0.15)) 90%,
+		linear-gradient(40deg, rgba(65, 220, 220, 0.15) 10%, transparent 40%, transparent 60%, rgba(0, 128, 128, 0.15)) 90%;
 	outline: 3px rgb(0, 0, 0) solid;
 	outline-offset: -3px;
 	box-shadow: inset 2px 2px 1px rgba(184, 10, 228, 0.553),
@@ -569,18 +564,17 @@ perspective: 1000px;
 .top {
 	bottom: 1rem;
 	rotate: x 90deg;
-background: hsla(216, 20%, 53%, 0.344);
+	background: hwb(181 58% 0% / 0.15);
 }
 
 .bottom {
 	top: 1rem;
 	rotate: x -90deg;
-background: hsla(257, 62%, 15%, 0.7);
+	background: rgba(21, 141, 141, 0.271);
 }
 
 .front {
 	translate: 0 0 1rem;
-	/* perspective: 1000px; */
 	transform-style: preserve-3d;
 }
 
@@ -588,10 +582,51 @@ background: hsla(257, 62%, 15%, 0.7);
 	translate: 0 0 -1rem;
 }
 
-.stone:hover {
-	outline-offset: -1px;
-	overflow: hidden;
-	animation-play-state: paused;
+.glow {
+	outline: 1px rgb(0, 0, 0) solid;
+}
+
+.out {
+	margin-left: .5rem;
+	color: #150836;
+	font-family: "Alumni Sans Collegiate One";
+	font-size: clamp(10px, .6vw, 36px);
+	text-shadow: #8bf5ff 2px 2px 5px;
+}
+
+.outland {
+	display: flex;
+	padding: .1rem;
+	align-items: center;
+	height: 120px;
+	outline: #4c2573 2px solid;
+	outline-offset: -4px;
+	width: 120px;
+	border: #000000 7px solid;
+	border-radius: 50%;
+	background: repeating-radial-gradient(black 51%, #9186ef 52%, #2e4449 53%, #000000 71%) 5px 50px;
+	box-shadow: #ff00a2 -1px -1px 5px, #42ceea -7px -7px 15px, inset #01191e -7px -7px 15px,
+		#ffffff -2px -2px 15px;
+	background-size: 250px 300px;
+}
+
+.categories h4 {
+	display: block;
+	font-family: "Fredericka the Great";
+	height: 30%;
+	margin: .5rem;
+	padding: .25rem;
+	font-size: clamp(10px, 2.6vw, 36px);
+	border: 1px solid rgb(136, 218, 239);
+	text-decoration: underline;
+}
+
+.haze {
+	height: 150px;
+	width: 120px;
+	box-shadow: inset rgba(0, 0, 0) -20px -20px 2px;
+	border: black solid 5px;
+	background: linear-gradient(rgb(48, 20, 20), rgb(233, 69, 52));
 }
 
 .stone::before {
@@ -611,10 +646,22 @@ background: hsla(257, 62%, 15%, 0.7);
 	inset: 0;
 	margin: auto;
 	background-size: cover;
-	translate: 0 0 -1rem;
 	width: 85%;
 	height: 85%;
 	animation: cube 120s linear infinite reverse;
+}
+
+.stone_item1 {
+	display: flex;
+	position: absolute;
+	justify-content: center;
+	align-items: center;
+	inset: 0;
+	margin: auto;
+	background-size: cover;
+	/* translate: 0 0 -1rem; */
+	width: 85%;
+	height: 85%;
 }
 
 .stone_label {
@@ -634,6 +681,27 @@ background: hsla(257, 62%, 15%, 0.7);
 .rainbow_city {
 	display: flex;
 	justify-content: space-evenly;
+}
+
+.canvass {
+	position: relative;
+	margin: .5rem;
+	outline: #000000 15px double;
+	outline-offset: -30px;
+	border-radius: 20px;
+	height: 100px;
+	width: 250px;
+	border: 10px solid black;
+	background: repeating-linear-gradient(teal, tan, brown);
+}
+
+.canvass::before {
+	content: "";
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background-image: radial-gradient(transparent 50%, black 60%);
+	background-size: 10px 10px;
 }
 
 .red {

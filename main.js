@@ -44,24 +44,103 @@
 
 // }
 
+
+const align = document.getElementById('align');
+const mission = document.getElementById('misson');
+const comm = document.getElementById('comm');
+const wants = document.getElementById('wants');
+const needs = document.getElementById('needs');
+const appear = document.getElementById('appear');
+
 function barChoice() {
-    if (document.getElementById('back0').checked) {
-        document.getElementById('chosenOne').src = './asset/cardBack0.png';
-    }
-    if (document.getElementById('back1').checked) {
-        document.getElementById('chosenOne').src = './asset/cardBack1.png';
-    }
-    if (document.getElementById('back2').checked) {
-        document.getElementById('chosenOne').src = './asset/cardBack2.png';
-    }
-    if (document.getElementById('back3').checked) {
-        document.getElementById('chosenOne').src = './asset/cardBack3.png';
-    }
-    if (document.getElementById('back4').checked) {
-        document.getElementById('chosenOne').src = './asset/cardBack4.png';
-    }
-    if (document.getElementById('back5').checked) {
-        document.getElementById('chosenOne').src = './asset/cardBack5.png';
-    }
+	if (document.getElementById('aasgard').checked) {
+		align.dataset.align = 'good';
+		mission.dataset.mission = 'share tech';
+		comm.dataset.comm = 'good';
+		wants.dataset.wants = 'will advance';
+		needs.dataset.needs = 'good';
+		appear.dataset.appear = 'good';
+	}
+	if (document.getElementById('anastasi').checked) {
+		align.dataset.align = 'evil';
+		mission.dataset.mission = 'enslave';
+		comm.dataset.comm = 'verbal';
+		wants.dataset.wants = 'attention';
+		needs.dataset.needs = 'uk';
+		appear.dataset.appear = 'uk';
+	}
+	if (document.getElementById('ash').checked) {
+		align.dataset.align = 'good';
+		mission.dataset.mission = 'good';
+		comm.dataset.comm = 'good';
+		wants.dataset.wants = 'good';
+		needs.dataset.needs = 'good';
+		appear.dataset.appear = 'good';
+	}
+	if (document.getElementById('flest').checked) {
+		align.dataset.align = 'good';
+		mission.dataset.mission = 'good';
+		comm.dataset.comm = 'good';
+		wants.dataset.wants = 'good';
+		needs.dataset.needs = 'good';
+		appear.dataset.appear = 'good';
+	}
+	if (document.getElementById('hyngr').checked) {
+		align.dataset.align = 'good';
+		mission.dataset.mission = 'good';
+		comm.dataset.comm = 'good';
+		wants.dataset.wants = 'good';
+		needs.dataset.needs = 'good';
+		appear.dataset.appear = 'good';
+	}
+	if (document.getElementById('iaata').checked) {
+		align.dataset.align = 'good';
+		mission.dataset.mission = 'good';
+		comm.dataset.comm = 'good';
+		wants.dataset.wants = 'good';
+		needs.dataset.needs = 'good';
+		appear.dataset.appear = 'good';
+	}
+	if (document.getElementById('jxenyin').checked) {
+		align.dataset.align = 'good';
+		mission.dataset.mission = 'good';
+		comm.dataset.comm = 'good';
+		wants.dataset.wants = 'good';
+		needs.dataset.needs = 'good';
+		appear.dataset.appear = 'good';
+	}
+	if (document.getElementById('perfect').checked) {
+		align.dataset.align = 'good';
+		mission.dataset.mission = 'good';
+		comm.dataset.comm = 'good';
+		wants.dataset.wants = 'good';
+		needs.dataset.needs = 'good';
+		appear.dataset.appear = 'good';
+	}
+	if (document.getElementById('narrof').checked) {
+		align.dataset.align = 'good';
+		mission.dataset.mission = 'good';
+		comm.dataset.comm = 'good';
+		wants.dataset.wants = 'good';
+		needs.dataset.needs = 'good';
+		appear.dataset.appear = 'good';
+	}
+	if (document.getElementById('tolmists').checked) {
+		align.dataset.align = 'good';
+		mission.dataset.mission = 'good';
+		comm.dataset.comm = 'good';
+		wants.dataset.wants = 'good';
+		needs.dataset.needs = 'good';
+		appear.dataset.appear = 'good';
+	}
+	if (document.getElementById('vypti').checked) {
+		align.dataset.align = 'good';
+		mission.dataset.mission = 'good';
+		comm.dataset.comm = 'good';
+		wants.dataset.wants = 'good';
+		needs.dataset.needs = 'good';
+		appear.dataset.appear = 'good';
+	}
 
 } deckChoice();
+
