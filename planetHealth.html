@@ -6,13 +6,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="main.css">
 	<link rel="icon" type="image/png" href="assets/favicon.ico" />
-	<title>Outlanders</title>
+	<title>Health</title>
 </head>
 
 <body>
 	<div class="shell">
 		<nav>
-			<a href="index.html">
+			<a style="color:var(--primary_link);" href="index.html">
 				HOME
 			</a>
 			<a href="stones.html">
@@ -21,7 +21,7 @@
 			<a href="population.html">
 				population
 			</a>
-			<a style="color:var(--primary_link);" href="outlander.html">
+			<a href="outlander.html">
 				outlanders
 			</a>
 			<a href="tech.html">
@@ -210,115 +210,40 @@
 		</div>
 		<div class="sidebar">
 			<form action="">
-				<ol class="out">
-					<li><input type="radio" checked class="sidebar_radio" id="aasgard" name="sidebar"
-							onchange="barChoice()" value="aasgard">
-						<label for="aasgard">Aasgard</label>
+				<ul>
+					<li><input type="radio" checked class="sidebar_radio" id="all" name="sidebar" value="all"
+onclick="javascript:window.location.href='index.html'; return false;" ;>
+						<label for="all">all</label>
 					</li>
-					<li><input type="radio" checked class="sidebar_radio" id="anastasi" name="sidebar"
-							onchange="barChoice()" value="anastasi">
-						<label for="anastasi">Anastasi</label>
+					<li><input type="radio" class="sidebar_radio" id="classes" name="sidebar" onchange="barChoice()"
+							value="classes">
+						<label for="classes">classes</label>
 					</li>
-					<li><input type="radio" checked class="sidebar_radio" id="ash" name="sidebar" onchange="barChoice()"
-							value="ash"> <label for="ash">Ash</label>
+					<li><input type="radio" class="sidebar_radio" id="progression" name="sidebar" onchange="barChoice()"
+							value="progression">
+						<label for="progression" style="color: rgb(126, 11, 124);">progression</label>
 					</li>
-					<li><input type="radio" class="sidebar_radio" id="flest" name="sidebar" onchange="barChoice()"
-							value="flest">
-						<label for="flest">Flest xB</label>
-					</li>
-					<li><input type="radio" class="sidebar_radio" id="endudi" name="sidebar" onchange="barChoice()"
-							value="endudi">
-						<label for="endudi">EnDudi</label>
-						<!-- good -->
-					</li>
-					<li><input type="radio" class="sidebar_radio" id="hyngr" name="sidebar" onchange="barChoice()"
-							value="hyngr">
-						<label for="hyngr">Hyngr</label>
-					</li>
-					<li><input type="radio" checked class="sidebar_radio" id="iaata" name="sidebar"
-							onchange="barChoice()" value="iaata">
-						<label for="iaata">i'Aa'ta</label>
-					</li>
-					<li><input type="radio" class="sidebar_radio" id="jxenyin" name="sidebar" onchange="barChoice()"
-							value="jxenyin">
-						<label for="jxenyin">Jxenyin</label>
-					</li>
-					<li><input type="radio" class="sidebar_radio" id="perfect" name="sidebar" onchange="barChoice()"
-							value="perfect">
-						<label for="perfect">The Perfect</label>
-					</li>
-					<li><input type="radio" class="sidebar_radio" id="narrof" name="sidebar" onchange="barChoice()"
-							value="narrof">
-						<label for="narrof">Narrof Li-a</label>
-					</li>
-
-					<li><input type="radio" class="sidebar_radio" id="sana" name="sidebar" onchange="barChoice()"
-							value="sana">
-						<label for="sana">Sana</label>
-						<!-- Good -->
-					</li>
-					<li><input type="radio" class="sidebar_radio" id="tolmists" name="sidebar" onchange="barChoice()"
-							value="tolmists">
-						<label for="tolmists">Tolmists</label>
-					</li>
-					<li><input type="radio" class="sidebar_radio" id="vypti" name="sidebar" onchange="barChoice()"
-							value="vypti">
-						<label for="vypti">Vypti</label>
-					</li>
-				</ol>
+				</ul>
 			</form>
 		</div>
 		<div class="bar">
 			<button class="adj"></button>
 		</div>
 		<div class="right_container">
-			<header class="info_banner">Outlanders can visit your community at any time. They always come bearing
-				gifts, although you may not be in the market for them. They can advance your society or take over making
-				it their own. Whatever their contribution, it would do you well to keep an eye on them for the duration
-				of their 'visit'.
+			<header class="info_banner">
+				Planet health is important. These are the categories you should pay attention to:
 			</header>
 			<div class="elements_container">
-				<div class="categories">
-					<h4 id="align" data-align="align">alignment
-						<div class="outBtn">
-							<div class="btnText">ok</div>
-							<div class="outIcon">
-								<div class="outI1"></div>
-								<div class="outI2"></div>
-							</div>
-						</div>
-					</h4>
-					<h4 id="mission" data-mission="mission">mission</h4>
-					<h4 id="comm" data-comm="comm">communicate</h4>
-					<h4 id="wants" data-wants="wants">wants</h4>
-					<h4 id="needs" data-needs="needs">needs</h4>
-					<h4 id="appear" data-appear="appear">appearance</h4>
-				</div>
-				<!-- <ul class="out1">
-					<li class="outland">anastasi</li>
-					<p>Evil. Will enslave. Powerful</p>
-					<li class="outland">aasgard</li>
-					<p>Good. Will advance. share tech</p>
-					<li class="outland">the perfect</li>
-					<p>colonists. will genetically change. surplanters</p>
-					<li class="outland">tolmists</li>
-					<p>colonists. will elevate. spoken and written words manifest power</p>
-					<li class="outland">hyngr</li>
-					<p>devistation, will destroy, initial sharing good, seductive, ugly </p>
-					<li class="outland">jxenyin</li>
-					<p>Good. will elevate. </p>
-					<li class="outland">narrof li'a</li>
-					<p>U/K</p>
-					<li class="outland">vypti x</li>
-					<p>neutral, vocal science</p>
-					<li class="outland">a'Aa'ta</li>
-					<p>Good. Calming/Sedating. Slow Progress</p>
-					<li class="outland">Ash</li>
-					<p>Annihilator. Quick</p>
-				</ul> -->
+
+				<div class="pSustain"></div>
+				<div class="pMorale"></div>
+				<div class="pEconomics"></div>
+				<div class="pPopulation"></div>
 			</div>
 		</div>
 	</div>
+	<footer></footer>
+	<script type="text/javascript" src="main.js"></script>
 </body>
 
 </html>
