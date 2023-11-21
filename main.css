@@ -702,11 +702,17 @@ li a:hover {
 	font-weight: 400;
 	color: rgb(73, 208, 242);
 	height: 30%;
-	margin: .5rem;
 	background-color: hsla(0, 0%, 0%, 0.4);
-	padding: .25rem;
 	font-size: clamp(10px, 2.6vw, 36px);
 	border: 1px solid rgb(136, 218, 239);
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	transition: 0.4s;
+}
+
+.active, .elements_container h4:hover {
+  background-color: #767676; 
 }
 
 .stone::before {
