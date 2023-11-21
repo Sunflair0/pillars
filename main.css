@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Lora:ital,wght@1,500&family=Notable&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Inter:wght@500&family=Lora:ital,wght@1,500&family=Noto+Sans+Symbols&family=Open+Sans&family=Roboto&family=Oswald&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Inter:wght@500&family=Lora:ital,wght@1,500&family=Noto+Sans+Symbols&family=Rubik+Glitch&family=Open+Sans&family=Roboto&family=Oswald&family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&display=swap');
 
 :root {
+	--logoBG: radial-gradient(rgba(213, 210, 255, 0.8) 10%, rgba(6, 163, 184, 0.884) 25%, black 60%);
 	--bg: rgb(10, 8, 27);
 	--primary_color: rgb(230, 230, 230);
 	--primary_link: #6a47f8;
@@ -60,6 +61,80 @@ body {
 	text-shadow: #000000 0 0 2px;
 }
 
+article {
+	position: absolute;
+	width: calc(100% - 5.5rem);
+	height: 1rem;
+	top: 1rem;
+	right: 0;
+	background-color: rgba(62, 11, 150, 0.8);
+}
+
+.logoscene {
+	display: flex;
+	position: absolute;
+	flex-direction: column;
+	border: 1px rgba(158, 218, 242, 0.6) solid;
+	outline: 2px solid rgba(154, 77, 153, 0.7);
+	outline-offset: 3px;
+	width: clamp(150px, 0.5vw, 25%);
+	height: 30vh;
+	margin-left: 0.25rem;
+	margin-top: -0.25rem;
+	justify-content: center;
+	align-items: center;
+	perspective: 1000px;
+	perspective-origin: 50% calc(50% - 300px);
+	scale: .5;
+}
+
+.logocube {
+	position: absolute;
+	top: 5vh;
+	height: 2rem;
+	width: 2rem;
+	transform-style: preserve-3d;
+	animation: cube 3s infinite linear;
+
+	@media only screen and (max-width: 150px) {
+		scale: .5;
+	}
+}
+
+.logoball {
+	height: 100%;
+	width: 100%;
+	scale: .8;
+	border-radius: 50%;
+	animation: cube 3s infinite linear reverse;
+	background: radial-gradient(circle at 100% 50%, rgb(7, 126, 181), rgb(86, 145, 218), transparent),
+		radial-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 0, 0.155)),
+		linear-gradient(rgb(0, 0, 198), rgb(109, 209, 242));
+}
+
+.logoball::before {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	scale: .85;
+	border-radius: 50%;
+	background: radial-gradient(circle at 30% 30%, rgb(215, 252, 255) 20%, transparent 20%),
+		radial-gradient(rgba(143, 194, 209, 0.9), rgba(48, 48, 1, 0.5)),
+		radial-gradient(rgb(91, 153, 194) 40%, rgb(34, 154, 170) 45%, rgb(70, 70, 216) 60%);
+	filter: blur(6px);
+	animation: none;
+}
+
+.logo {
+	display: flex;
+	position: absolute;
+	background: var(--secondary_color);
+	height: 7vh;
+	width: 100%;
+	bottom: .25rem;
+}
+
 label {
 	margin-left: .5rem;
 	color: #1d0836;
@@ -73,11 +148,11 @@ nav {
 	display: flex;
 	position: absolute;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	text-transform: uppercase;
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-	width: 100%;
+	right: 0;
+	bottom: 0vh;
+	width: calc(100% - 4rem);
 }
 
 nav a:link,
@@ -89,7 +164,7 @@ li a:link {
 }
 
 li a:link {
-	margin-left: .5rem;
+	margin-left: 1rem;
 }
 
 ol p {
@@ -202,18 +277,7 @@ li a:hover {
 	position: absolute;
 	width: 100%;
 	top: 0;
-	height: 31vh;
-}
-
-.top-half {
-	display: flex;
-	position: absolute;
-	flex-direction: row;
-	width: 80%;
-	background: var(--secondary_color);
-	height: 12vh;
-	margin: 3rem 0;
-	width: 100%;
+	height: 20vh;
 }
 
 .left_top {
@@ -302,24 +366,44 @@ li a:hover {
 }
 
 .words {
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	color: #8c878ca7;
+	bottom: 0;
 	width: 100%;
 	font-family: 'Times New Roman', Times, serif;
 	-webkit-text-stroke: 2px hsla(0, 0%, 0%, 0.75);
 	text-shadow: 3px 3px 1px rgb(164, 175, 255);
 	-webkit-background-clip: text;
-	font-size: 30px;
-	letter-spacing: 15px;
+	font-size: 16px;
+	letter-spacing: 2px;
 	z-index: 2;
+}
+
+.words::before,
+.words::after {
+	content: "";
+	position: absolute;
+	height: .1rem;
+	width: .1rem;
+	border: 3px solid rgba(41, 173, 255, 0.468);
+	/* border-radius: 50%; */
+}
+
+.words::before {
+	left: -5px;
+}
+
+.words::after {
+	right: -5px;
 }
 
 .lower_container {
 	display: flex;
 	position: relative;
-	margin-top: 36vh;
+	margin-top: 30vh;
 	height: 59vh;
 	bottom: 0;
 	width: 100%;
@@ -587,10 +671,10 @@ li a:hover {
 }
 
 .out {
-	margin-left: .5rem;
+	margin-left: 1.25rem;
 	color: #150836;
 	font-family: "Alumni Sans Collegiate One";
-	font-size: clamp(10px, .6vw, 36px);
+	font-size: clamp(20px, 1vh, 36px);
 	text-shadow: #8bf5ff 2px 2px 5px;
 }
 
@@ -612,7 +696,9 @@ li a:hover {
 
 .categories h4 {
 	display: block;
-	font-family: "Fredericka the Great";
+	font-family: "Rubik Glitch";
+	font-weight: 400;
+	color: rgb(73, 208, 242);
 	height: 30%;
 	margin: .5rem;
 	background-color: hsla(0, 0%, 0%, 0.4);

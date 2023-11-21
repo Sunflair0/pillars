@@ -306,11 +306,11 @@
 @keyframes turning1 {
 
 	0% {
-		transform: translatex(2px) translateZ(20px) rotatez(0deg);
+		transform: rotatey(10deg) translatey(-10px) translateZ(20px) rotatez(0deg);
 	}
 
 	100% {
-		transform: translateY(2px) translateZ(20px) rotatez(360deg);
+		transform: rotatey(10deg) translatey(-10px) translateZ(20px) rotatez(360deg);
 	}
 
 }
@@ -319,51 +319,52 @@
 
 	0% {
 
-		transform: rotatey(0deg) translateY(10px);
+		transform: rotateX(30deg) rotatez(0deg) translateY(10px);
 	}
 
 	100% {
 
-		transform: rotatey(-360deg) translateY(10px);
+		transform: rotateX(30deg) rotatez(-360deg) translateY(10px);
 	}
-
 }
 
 .ring {
 	display: flex;
-	border: 5px dashed rgb(109, 86, 32);
-	outline-offset: -3px;
-	outline: 6px double rgb(109, 86, 32);
+	border: 7px dashed rgb(124, 93, 20);
+	outline-offset: -4px;
+	outline: 7px double rgb(124, 93, 20);
 	position: absolute;
-	height: 78%;
-	width: 78%;
-	translate: 0 0px -1.5rem;
-	rotate: x 70deg;
-	transform-style: preserve-3d;
+	height: 100%;
+	width: 100%;
+	rotate: x 55deg;
 	inset: 0;
+	bottom: .25rem;
 	margin: auto;
 	border-radius: 100%;
-	animation: turning1 20s linear infinite;
+	animation: turning1 70s linear infinite;
 }
 
-.ring::before {
+.ring1 {
 	content: "";
 	position: absolute;
-	border: #02b58856 1px solid;
+	border: #c6dbd58e 1px solid;
 	border-radius: 50%;
 	inset: 0;
 	margin: auto;
 	width: 80%;
-
 	height: 80%;
-	rotate: x -90deg;
-	background: radial-gradient(blue, #07c596);
-	animation: turning2 20s reverse linear infinite;
+	/* translate: 0px -25px 0px; */
+	rotate: x -55deg;
+	background: radial-gradient(circle at 70% 0%, #6fff92 0%, transparent 50%),
+		radial-gradient(#0022ff, #09098e);
+	animation: turning1 70s reverse linear infinite;
 
 }
 
 .ringScene {
-	transform: translate(20px, 50px);
+	transform-style: preserve-3d;
+	perspective: 100px;
+	translate: 0px 25px 0px;
 }
 
 .ball {
@@ -372,13 +373,13 @@
 	border-radius: 50%;
 	inset: 0;
 	margin: auto;
-	width: 50%;
-	height: 50%;
+	width: 60%;
+	height: 60%;
 	background: radial-gradient(blue, #07c596);
 }
 
 .perspective {
-	perspective: 60px;
+	perspective: 500px;
 	transform-style: preserve-3d;
 }
 
@@ -558,10 +559,10 @@
 }
 
 .warp {
-		width: 100%;
+	width: 100%;
 	height: 100%;
 	border-radius: 50%;
-	background-image: radial-gradient(white 0%, rgb(15, 119, 142) 5%,transparent 9%, transparent 15%, rgba(195, 240, 245, 0.25) 30%, rgba(98, 242, 242, 0.5) 35%, transparent 37%);
+	background-image: radial-gradient(white 0%, rgb(15, 119, 142) 5%, transparent 9%, transparent 15%, rgba(195, 240, 245, 0.25) 30%, rgba(98, 242, 242, 0.5) 35%, transparent 37%);
 	animation: glow 3s linear infinite;
 }
 
@@ -573,7 +574,7 @@
 	border-radius: 50%;
 	rotate: y 70deg;
 	background-image: repeating-conic-gradient(#ff000000 0%, #ff000000 5%, #5bd6f545 15%, #5bf2f5b5 20%),
- repeating-conic-gradient(#ff000000 0%, #ff000000 5%, #5bd6f545 15%, #66fcff 20%);
+		repeating-conic-gradient(#ff000000 0%, #ff000000 5%, #5bd6f545 15%, #66fcff 20%);
 	animation: shrink 12s ease-in-out infinite;
 }
 
@@ -585,14 +586,14 @@
 	border-radius: 50%;
 	rotate: x -70deg;
 	background-image: repeating-conic-gradient(#ff000000 0%, #ff000000 5%, #5bd6f545 15%, #5bf2f5b5 20%),
- repeating-conic-gradient(#ff000000 0%, #ff000000 5%, #5bd6f545 15%, #66fcff 20%);
-	animation: shrink 12s ease-in-out  infinite;
+		repeating-conic-gradient(#ff000000 0%, #ff000000 5%, #5bd6f545 15%, #66fcff 20%);
+	animation: shrink 12s ease-in-out infinite;
 }
 
 @keyframes glow {
-50% {
+	50% {
 		opacity: .7;
-}
+	}
 }
 
 @keyframes shrink {
@@ -603,7 +604,7 @@
 
 	50% {
 		scale: .5;
-opacity: .6;
+		opacity: .6;
 	}
 
 	100% {
