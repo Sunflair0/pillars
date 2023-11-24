@@ -344,7 +344,7 @@
 	animation: turning1 70s linear infinite;
 }
 
-.ring1 {
+.ring::before {
 	content: "";
 	position: absolute;
 	border: #c6dbd58e 1px solid;
@@ -353,11 +353,12 @@
 	margin: auto;
 	width: 80%;
 	height: 80%;
+	transform-style: preserve-3d;
 	/* translate: 0px -25px 0px; */
 	rotate: x -55deg;
 	background: radial-gradient(circle at 70% 0%, #6fff92 0%, transparent 50%),
 		radial-gradient(#0022ff, #09098e);
-	animation: turning1 70s reverse linear infinite;
+	animation: turning1 70s reverse linear forwards;
 
 }
 

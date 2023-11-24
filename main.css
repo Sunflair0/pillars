@@ -68,7 +68,9 @@ article {
 	top: 1.2rem;
 	right: 0;
 	background-color: rgba(62, 11, 150, 0.5);
-	background-image: radial-gradient(rgb(163, 163, 239) 0 2px, transparent 2px 4px, rgba(89, 229, 244, 0.36) 12px 20px);
+	background-image:
+		radial-gradient(rgb(163, 163, 239) 0 2px, transparent 2px 4px, rgba(89, 229, 244, 0.36) 12px 20px),
+		repeating-linear-gradient(90deg, transparent 0 10px, rgb(0, 0, 0) 10px 14px);
 	background-size: 24px 24px;
 }
 
@@ -579,21 +581,6 @@ li a:hover {
 	transition: .3s all;
 }
 
-.elements_container {
-	display: flex;
-	flex-direction: column;
-	position: relative;
-	top: 20vh;
-	font-size: clamp(10px, 2.6vw, 36px);
-	text-transform: capitalize;
-	height: 48vh;
-	width: 100%;
-	margin: 10px;
-	z-index: -1;
-	overflow-y: auto;
-	transition: .3s all;
-}
-
 .stone_container {
 	display: flex;
 	flex-direction: column;
@@ -697,27 +684,43 @@ li a:hover {
 	background-size: 250px 300px;
 }
 
-.elements_container input{
-	display: block;
+.elements_container {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	top: 20vh;
+	font-size: clamp(10px, 2.6vw, 36px);
+	text-transform: capitalize;
+	height: 48vh;
+	width: 100%;
+	margin: 10px;
+	z-index: -1;
+	overflow-y: auto;
+	transition: .3s all;
+}
+
+.elements_container input {
 	font-family: "Rubik Glitch";
 	font-weight: 400;
 	color: rgb(73, 208, 242);
-	height: 30%;
+	height: inherit;
 	background-color: hsla(0, 0%, 0%, 0.4);
 	border: 1px solid rgb(136, 218, 239);
 	cursor: pointer;
-	padding: 18px;
 	width: 100%;
 	transition: 0.4s;
 }
 
 .elements_container input[type="radio"] {
-  appearance: none;
-  margin: 0;
+
+	transform: translateY(50%);
+	appearance: none;
+	margin: -2.5% 0;
 }
 
-.active, .elements_container input:hover {
-  background-color: #595959; 
+.active,
+.elements_container input:hover {
+	background-color: #ffffff39;
 }
 
 .stone::before {
