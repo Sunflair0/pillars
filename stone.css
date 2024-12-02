@@ -315,6 +315,18 @@
 
 }
 
+@keyframes turning1 {
+
+	0% {
+		transform: translatey(-20px) rotatez(0deg);
+	}
+
+	100% {
+		transform: translatey(-20px) rotatez(360deg);
+	}
+
+}
+
 @keyframes turning2 {
 
 	0% {
@@ -328,44 +340,38 @@
 	}
 }
 
-.ring {
-	display: flex;
-	border: 7px dashed rgb(124, 93, 20);
-	outline-offset: -4px;
-	outline: 7px double rgb(124, 93, 20);
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	rotate: x 55deg;
-	inset: 0;
-	bottom: .25rem;
-	margin: auto;
-	border-radius: 100%;
-	animation: turning1 70s linear infinite;
-}
-
-.ring::before {
+.planet::before {
 	content: "";
 	position: absolute;
+	border: 5px dashed rgb(188,133,45);
+	outline-offset: -8px;
+	outline: 15px double rgb(162, 115, 7);
+	position: absolute;
+	height: 250%;
+	aspect-ratio: 1/1;
+	rotate: x 80deg;
+	inset: 0;
+	left: -75%;
+	margin: auto;
+	border-radius: 50%;
+	animation: turning1 50s linear infinite;
+}
+
+.planet {
+	display: flex;
+	transform-style: preserve-3d;
 	border: #c6dbd58e 1px solid;
 	border-radius: 50%;
 	inset: 0;
 	margin: auto;
-	width: 80%;
-	height: 80%;
-	transform-style: preserve-3d;
-	/* translate: 0px -25px 0px; */
-	rotate: x -55deg;
+	width: 47%;
+	aspect-ratio: 1/1;
 	background: radial-gradient(circle at 70% 0%, #6fff92 0%, transparent 50%),
 		radial-gradient(#0022ff, #09098e);
-	animation: turning1 70s reverse linear forwards;
-
 }
 
 .ringScene {
 	transform-style: preserve-3d;
-	perspective: 100px;
-	translate: 0px 25px 0px;
 }
 
 .ball {
@@ -380,8 +386,9 @@
 }
 
 .perspective {
-	perspective: 500px;
-	transform-style: preserve-3d;
+	perspective: 100px;
+	/* top: 50%; */
+	/* transform-style: preserve-3d; */
 }
 
 .stationTop {

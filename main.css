@@ -23,12 +23,14 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-size: 40px;
+	/* font-size: 16px; */
 }
 
 html {
 	font-family: "Notable", 'Times New Roman', Times, serif;
 	overflow-y: auto;
+	/* font-size: 62.5%; */
+	font-size: 40px;
 }
 
 ::-webkit-scrollbar {
@@ -57,6 +59,7 @@ body {
 	background-color: rgb(10, 8, 27);
 	color: var(--text);
 	text-shadow: #000000 0 0 2px;
+	counter-reset: pops;
 }
 
 article {
@@ -507,7 +510,6 @@ li a:hover {
 .sidebar {
 	display: flex;
 	position: absolute;
-	width: 25%;
 	padding: 0 10px;
 	height: 100%;
 	left: 0;
@@ -563,8 +565,26 @@ li a:hover {
 	margin-top: .5rem;
 }
 
+form {
+	/* display: flex;
+justify-content: center; */
+	font-size: 16px;
+}
+
+li {
+	list-style-type: none;
+}
+
 .sidebar li:hover {
 	color: #8bf5ff;
+}
+
+.sidebar li::before {
+	counter-increment: pops;
+	content: "P " counter(pops) ":";
+	font-size: 1.5em;
+	margin: 0;
+
 }
 
 .content_container {
@@ -621,7 +641,14 @@ li a:hover {
 	background-image: hsla(245, 53%, 17%, 0.3);
 	border: 2px solid rgb(29, 220, 134);
 	transition: .3s all;
+
+	:hover {
+		border: 2px solid rgb(77, 210, 247);
+	}
+
 }
+
+
 
 .left {
 	right: 1rem;
@@ -659,7 +686,7 @@ li a:hover {
 }
 
 .out {
-	margin-left: 1.25rem;
+	margin-left: .25rem;
 	color: #150836;
 	font-family: "Alumni Sans Collegiate One";
 	font-size: clamp(20px, 1vh, 36px);
